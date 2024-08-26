@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/*--------------------- 2.4.Mobiel Menu -------------------- */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
+
+
+
+
+.mobile-menu {}
+.mobile-menu ul {
+  background-color: #333;
+}
+.mobile-menu ul li {
+  position: relative;
+  border: 1px solid #dddddd;
+  padding: 10px 0px;
+}
+.mobile-menu ul li a {
+  color: #fff;
+  display: block;
+}
+.mobile-menu ul li ul {
+  display: none;
+  padding-left: 15px;
+}
+.mobile-menu ul li ul li {
+  border: none;
+}
+.mobile-menu ul li .menu-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.open > .menu-arrow {
+  transform: rotate(-180deg);
+}
