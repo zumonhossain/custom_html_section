@@ -1,0 +1,1000 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #1ED760;
+    --white: #ffffff;
+    --black: #323232;
+    --border:#ced4da;
+    --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --hover: #1ED760;
+}
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+select:focus{
+    outline: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+.section_padding{
+    padding: 60px 0px;
+}
+.section_padding_bottom{
+    padding-bottom: 60px;
+}
+.section_padding_top{
+    padding-top: 60px;
+}
+.section_top_space{
+    padding-top: 60px;
+}
+/*
+==============================================================
+    Landing Page Area Css
+==============================================================
+*/
+
+/* landing page common button css */
+.landing_page_common_btn_link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+    color: var(--white);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    background-color: var(--primary_color);
+    border-radius: 3px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    padding: 19px 50px 16px;
+    z-index: 1;
+}
+.landing_page_common_btn_link:hover{
+    color: var(--white);
+}
+
+/* landing page section title css */
+.landing_page_section_title{
+    text-align: center;
+}
+.landing_page_section_title h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* landing page logo with banner css */
+.landing_page_logo {
+    margin-top: 10px;
+}
+.landing_page_logo_banner_area {
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 69%;
+}
+.landing_page_logo img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 55px;
+}
+.landing_page_banner_title {
+    margin-top: 300px;
+    margin-bottom: 50px;
+    padding-right: 45%;
+}
+.landing_page_banner_title h1 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 65px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* landing page emergency call css */
+.landing_page_emergency_call {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.landing_page_emergency_call h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.landing_page_emergency_call_link {
+    font-size: 30px;
+    color: var(--black);
+    display: block;
+    margin-top: 20px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.landing_page_emergency_call_link:hover{
+    color: var(--black);
+}
+
+
+
+
+
+/* landing page product card css */
+.landing_page_product_card_list ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.landing_page_product_card_list ul li {
+    list-style: none;
+    width: 49.1%;
+}
+.landing_page_product_card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 28px;
+    position: relative;
+}
+.landing_page_product_card_checkbox {
+    float: left;
+    width: 30px;
+    display: block;
+    overflow: hidden;
+    padding-left: 5px;
+}
+.landing_page_product_image {
+    width: 85px;
+    height: 90px;
+    margin-right: 15px;
+    float: left;
+    display: block;
+    overflow: hidden;
+}
+.landing_page_product_image img {
+    width: 100%;
+    height: 100%;
+}
+.landing_page_product_details {
+    display: block;
+    overflow: hidden;
+}
+.landing_page_product_color_with_qty_count {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+    margin-top: 4px;
+}
+.landing_page_product_qty_count i {
+    line-height: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.landing_page_product_qty_count {
+    line-height: 0;
+}
+.landing_page_product_color p {
+    font-weight: 500;
+}
+.landing_page_product_qty_count span {
+    font-weight: 500;
+}
+.landing_page_product_qty_with_price {
+    display: flex;
+    align-items: center;
+}
+.landing_page_product_qty_minus {
+    border: none;
+    background-color: var(--primary_color);
+    color: var(--white);
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+    float: left;
+}
+.landing_page_product_qty input {
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-left: 0px;
+    border-right: 0px;
+    float: left;
+}
+.landing_page_product_qty_plus {
+    border: none;
+    background-color: var(--primary_color);
+    color: var(--white);
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    font-size: 13px;
+    float: left;
+}
+.landing_page_product_price {
+    margin-left: 15px;
+}
+.landing_page_product_price span {
+    font-weight: 500;
+}
+.landing_page_product_discount_price {
+    padding-left: 10px;
+    text-decoration: line-through;
+    color: #7a7070cf;
+}
+
+
+
+
+
+
+
+/* landing page order now button css */
+.landing_page_order_now_btn{
+    text-align: center;
+}
+/* landing page video css */
+.landing_page_video_iframe iframe {
+    width: 100%;
+    height: 600px;
+}
+/* landing page service css */
+.landing_page_service {
+    padding: 20px;
+    background-color: var(--white);
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    border-radius: 3px;
+    margin-bottom: 28px;
+}
+.landing_page_service_title {
+    margin-bottom: 15px;
+}
+.landing_page_service_title h4 {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* landing page product advantage css */
+.landing_page_product_advantage_image img {
+    max-width: 100%;
+    height: auto;
+}
+.landing_page_product_advantage_list ul{
+    margin: 0;
+    padding: 0;
+}
+.landing_page_product_advantage_list ul li {
+    list-style: none;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.landing_page_product_advantage_list ul li:last-child{
+    margin-bottom: 0px;
+}
+.landing_page_advantage_icon i{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: var(--primary_color);
+    text-align: center;
+    border-radius: 50%;
+    font-size: 20px;
+    float: left;
+    display: block;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-right: 10px;
+}
+.landing_page_product_advantage_list ul li span{
+    overflow: hidden;
+    display: block;
+    font-size: 22px;
+    color: #000000;
+    line-height: 33px;
+}
+/* landing page special price css */
+.landing_page_special_price_content {
+    text-align: center;
+}
+.landing_page_special_price h5 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.landing_page_special_price h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* landing page home delivery css */
+.landing_page_home_delivery_area{
+    background-color: #faf8f6;
+}
+.landing_page_home_delivery_list{
+    text-align: center;
+}
+.landing_page_home_delivery_list ul{
+    margin: 0;
+    padding: 0;
+}
+.landing_page_home_delivery_list ul li {
+    list-style: none;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 50px;
+}
+/* landing page customer reviews css */
+.landing_page_customer_reviews_item {
+    background-color: var(--white);
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    margin: 2px;
+    padding: 20px;
+    border-radius: 3px;
+}
+.landing_page_customer_reviews_image img {
+    width: 70px !important;
+    height: 70% !important;
+    border-radius: 100%;
+}
+.landing_page_customer_reviews_name h6 {
+    font-size: 18px;
+    font-weight: 400;
+}
+.landing_page_customer_reviews_rating {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* landing page cart css */
+.landing_page_shipping {
+    padding: 20px;
+    background-color: var(--white);
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    border-radius: 3px;
+}
+.landing_page_shipping_title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.landing_page_shipping_title h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
+.landing_page_shipping_item {
+    margin-bottom: 15px;
+}
+.landing_page_shipping_item input,
+.landing_page_shipping_item select {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 20px 20px;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.landing_page_shipping_item select {
+    font-size: 16px;
+}
+.landing_page_cart {
+    padding: 20px;
+    background-color: var(--white);
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    border-radius: 3px;
+}
+.landing_page_cart_title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.landing_page_cart_title h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
+.landing_page_cart_list ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding: 5px 0px;
+}
+.landing_page_cart_image {
+    line-height: 0px;
+}
+.landing_page_cart_image img {
+    width: 80px;
+    height: 80px;
+}
+.landing_page_cart_name {
+    width: 300px;
+}
+.landing_page_cart_qty {
+    width: 100px;
+}
+.landing_page_cart_qty_minus {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background-color: var(--primary_color);
+    border: none;
+    color: var(--white);
+    font-size: 13px;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+.landing_page_cart_qty input {
+    height: 25px;
+    width: 40px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    float: left;
+    text-align: center;
+    font-size: 13px;
+}
+.landing_page_cart_qty_plus {
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    background-color: var(--primary_color);
+    border: none;
+    color: var(--white);
+    font-size: 13px;
+    cursor: pointer;
+    display: block;
+}
+.landing_page_cart_delete_btn {
+    line-height: 0;
+    width: 50px;
+    text-align: center;
+}
+.landing_page_cart_delete_btn_link {
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+}
+.landing_page_cart_price {
+    width: 80px;
+    text-align: right;
+}
+.landing_page_cart_price strong {
+    font-weight: 400;
+}
+.landing_page_cart_price_table_cell strong span{
+    font-weight: 400;
+}
+.landing_page_cart_price_table_cell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding: 10px 0px;
+}
+.landing_page_cart_price_table_cell strong {
+    font-weight: 500;
+}
+.landing_page_cart_submit_btn {
+    margin-top: 30px;
+}
+.landing_page_cart_submit_btn_link {
+    border: none;
+    width: 100%;
+    display: block;
+    background-color: var(--primary_color);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 15px 0px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+/* landing page footer css */
+.landing_page_footer_area {
+    background-color: #202124;
+}
+.landing_page_footer_address {
+    text-align: center;
+}
+.landing_page_footer_address p {
+    color: var(--white);
+    font-weight: 300;
+}
+.landing_page_footer_phone_link {
+    color: var(--white);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.landing_page_footer_phone_link:hover{
+    color: var(--primary_color);
+}
+.landing_page_footer_address p span {
+    color: var(--primary_color);
+    font-weight: 500;
+}
+.landing_page_footer_copyright {
+    text-align: center;
+}
+.landing_page_footer_copyright p {
+    color: var(--white);
+    font-weight: 300;
+}
+.landing_page_footer_copyright p .landing_page_footer_copyright_link {
+    color: var(--primary_color);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    font-weight: 600;
+}
+.landing_page_footer_copyright p .landing_page_footer_copyright_link:hover{
+    color: var(--primary_color);
+}
+.landing_page_footer_bottom {
+    border-top: 1px solid #f7f0f021;
+    padding: 10px 0px;
+}
+
+
+
+
+
+
+
+
+
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .landing_page_banner_title {
+        margin-top: 200px;
+    }
+    .landing_page_product_card {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .landing_page_cart_name {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .landing_page_banner_title {
+        margin-top: 150px;
+    }
+    .landing_page_banner_title {
+        padding-right: 20%;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .landing_page_product_advantage_list ul li span {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .landing_page_cart_name {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .landing_page_banner_title {
+        padding-right: 0;
+    }
+    .landing_page_banner_title h1 {
+        font-size: 30px;
+        line-height: 55px;
+    }
+    .landing_page_shipping {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .landing_page_banner_title {
+        margin-top: 70px;
+    }
+    .landing_page_product_advantage_image{
+        margin-bottom: 30px;
+    }
+    .landing_page_product_card_list ul {
+        display: block;
+    }
+    .landing_page_product_card_list ul li {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section_padding_top{
+        padding-top: 30px;
+    }
+    .section_padding_bottom{
+        padding-bottom: 30px;
+    }
+    .section_padding {
+        padding: 30px 0px;
+    }
+    .section_top_space {
+        padding-top: 15px;
+    }
+    .landing_page_section_title h2 {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .landing_page_logo_banner_area {
+        height: 70vh;
+    }
+    .landing_page_banner_title h1 {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .landing_page_common_btn_link {
+        font-size: 15px;
+        padding: 15px 15px 10px;
+    }
+    .landing_page_banner_title {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .landing_page_emergency_call h3 {
+        font-size: 20px;
+    }
+    .landing_page_emergency_call_link {
+        font-size: 22px;
+        margin-top: 15px;
+    }
+    .landing_page_video_iframe iframe {
+        height: 300px;
+    }
+    .landing_page_service_title h4 {
+        font-size: 16px;
+    }
+    .landing_page_product_advantage_list ul li span {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .landing_page_product_advantage_list ul li {
+        margin-bottom: 10px;
+    }
+    .landing_page_special_price h5 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .landing_page_special_price h3 {
+        font-size: 18px;
+    }
+    .landing_page_home_delivery_list ul li {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 35px;
+    }
+    .landing_page_shipping_title h5 {
+        font-size: 18px;
+    }
+    .landing_page_shipping_item input, .landing_page_shipping_item select {
+        padding: 10px 10px;
+    }
+    .landing_page_cart_image img {
+        width: 50px;
+        height: 50px;
+    }
+    .landing_page_cart_name p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .landing_page_cart_name {
+        padding-left: 5px;
+        width: 120px;
+    }
+    .landing_page_cart_qty_minus {
+        width: 15px;
+        height: 20px;
+        line-height: 22px;
+        font-size: 10px;
+    }
+    .landing_page_cart_qty input {
+        height: 20px;
+        width: 25px;
+        font-size: 12px;
+    }
+    .landing_page_cart_qty_plus {
+        width: 15px;
+        height: 20px;
+        line-height: 22px;
+        font-size: 10px;
+    }
+    .landing_page_cart_delete_btn_link {
+        font-size: 13px;
+    }
+    .landing_page_cart_price strong {
+        font-size: 12px;
+    }
+    .landing_page_cart_delete_btn {
+        width: 30px;
+    }
+    .landing_page_cart_price_table_cell strong {
+        font-size: 14px;
+    }
+    .landing_page_cart_submit_btn_link {
+        font-size: 15px;
+        padding: 10px 0px;
+    }
+    .landing_page_product_card {
+        padding: 10px;
+        padding-left: 0px;
+    }
+    .landing_page_product_image {
+        width: 55px;
+        height: 55px;
+        margin-right: 5px;
+    }
+    .landing_page_product_name p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .landing_page_product_color p {
+        font-size: 14px;
+    }
+    .landing_page_product_qty_count i {
+        font-size: 14px;
+    }
+    .landing_page_product_qty_count span {
+        font-size: 14px;
+    }
+    .landing_page_product_qty input {
+        width: 40px;
+    }
+    .landing_page_product_price span {
+        font-size: 14px;
+    }
+    .landing_page_product_discount_price {
+        padding-left: 5px;
+    }
+    .landing_page_product_price {
+        margin-left: 10px;
+    }
+    .landing_page_cart_title {
+        margin-bottom: 15px;
+    }
+    .landing_page_shipping_title {
+        margin-bottom: 15px;
+    }
+    .landing_page_customer_reviews_details p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 350px) {
+
+}
