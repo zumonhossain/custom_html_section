@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!--Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/plugin/owl.carousel.min.css">
+        <!-- Magnific popup -->
+        <link rel="stylesheet" href="assets/css/plugin/magnific-popup.min.css">
+        <!-- Nice Select -->
+        <link rel="stylesheet" href="assets/css/plugin/nice-select.css">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+
+
+
+
+
+
+
+        <!--============ Header Area Start ============-->
+        <div class="container section_padding">
+            <div class="row">
+                <div class="col-xxl-4">
+                    <div class="zooming_image_content">
+                        <div class="zooming_show_image">
+                            <img src="assets/images/products/7.png" alt="">
+                        </div>
+                        <div class="zooming_image_list">
+                            <ul>
+                                <li class="active">
+                                    <img src="assets/images/products/7.png" onclick=" showImg(this.src)" class="clickable-image">
+                                </li>
+                                <li>
+                                    <img src="assets/images/products/6.jpg" onclick=" showImg(this.src)" class="clickable-image">
+                                </li>
+                                <li>
+                                    <img src="assets/images/products/4.webp" onclick=" showImg(this.src)" class="clickable-image">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============ Header Area End ============-->
+
+        <!-- Zooming Image Start -->
+        <script>
+            // list image start
+            let clickImageList = document.querySelector('.zooming_show_image img');
+
+            function showImg(zoomingImage) {            
+                clickImageList.src = zoomingImage;        
+            }
+            // list image end
+
+            // zooming image start
+            document.querySelectorAll('.zooming_show_image').forEach(elem => {
+                let x,y, width, height;
+                elem.onmouseenter = () => {
+                    const size = elem.getBoundingClientRect();
+
+                    x = size.x;
+                    y = size.y;
+
+                    width = size.width;
+                    height = size.height;
+                };
+
+                elem.onmousemove = e =>{
+                    const horizontal = (e.clientX - x) / width*100;
+                    const vertical = (e.clientY - y) / height*100;
+
+                    elem.style.setProperty('--x', horizontal + '%');
+                    elem.style.setProperty('--y', vertical + '%');
+                };
+            });
+            // zooming image end
+
+            // active image start
+            var zoomingImageList = document.querySelectorAll("ul li");
+
+            zoomingImageList.forEach( i => {
+                i.addEventListener("click",()=>{
+                    resetLinks();
+                    i.classList.add("active");
+                })
+            })
+
+            function resetLinks(){
+                zoomingImageList.forEach(i => {
+                    i.classList.remove("active")
+                })
+            }
+            // active image end
+        </script>
+        <!-- Zooming Image End -->
+
+
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+
+        <!-- jquery zooming code -->
+        <!-- <script>
+            $(document).on('click', 'ul li', function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            });
+        </script> -->
+
+
+    </body>
+</html>

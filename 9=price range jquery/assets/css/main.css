@@ -1,0 +1,38 @@
+
+
+
+
+
+.price-range-content .ui-slider {
+  position: relative;
+}
+.ui-slider .ui-slider-handle {
+  position: absolute;
+}
+.ui-slider .ui-slider-range {
+  position: absolute;
+}
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+.price-range-content .ui-widget.ui-widget-content {
+  height: 5px;
+  background-color: #EDEDED;
+}
+.price-range-content .ui-slider-horizontal .ui-slider-range {
+  background-color: greenyellow;
+}
+.price-range-content .ui-slider .ui-slider-handle {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+.price-range-item .price-input-range input {
+  font-weight: 500;
+  font-size: 14px;
+}
+

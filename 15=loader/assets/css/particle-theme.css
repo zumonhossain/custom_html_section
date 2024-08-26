@@ -1,0 +1,75 @@
+
+
+
+/* Circle Preloader */
+
+
+.loader-item {
+	display: block;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	animation: spin 2s linear infinite;
+}
+.loader-item:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	animation: spin 3s linear infinite;
+}
+.loader-item:after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.pre-loader {
+	transition: all 0.65s ease 0s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 10000;
+	background-color: #091019;
+	opacity: 1;
+}
+.pre-loader.is-inactive {
+	transition: all 1.4s ease-in 0s;
+	opacity: 0;
+}
+.loader-item {
+	border-top-color: #9300F5;
+}
+
+.loader-item:before {
+	border-top-color: #B44AFF;
+}
+
+.loader-item:after {
+	border-top-color: #d12bff;
+}

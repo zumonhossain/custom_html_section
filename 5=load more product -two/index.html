@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+
+        <style>
+            body {
+                background: #f2e7e5;
+                font-family: sans-serif;
+            }
+            .wrapper {
+                width: 900px;
+                min-height: auto;
+                margin: 20px auto;
+            }
+            .wrapper ul {
+                list-style: none;
+                padding: 0;
+            }
+            .wrapper ul:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            .wrapper ul li {
+                width: calc(30% - 5px);
+                margin: 30px 15px 0;
+                height: 150px;
+                background-size: cover;
+                background-position: center center;
+                float: left;
+                box-shadow: 0 15px 10px 1px rgba(0, 0, 0, 0.5);
+            }
+            .wrapper ul li:nth-child(1n + 4) {
+                max-height: 0;
+                opacity: 0;
+                transition: 0.2s ease-in;
+            }
+            .wrapper .btn-area {
+                display: block;
+                background: #7f2a4b;
+                color: #fff;
+                cursor: pointer;
+                text-align: center;
+                font-weight: 900;
+                width: 180px;
+                line-height: 50px;
+                margin: 50px auto 0;
+                border-radius: 50px;
+            }
+            .wrapper .btn-area .btn2 {
+                display: none;
+            }
+            .wrapper #btnBox {
+                display: none;
+            }
+            .wrapper #btnBox:checked~ul li:nth-child(1n + 1) {
+                max-height: 100%;
+                opacity: 1;
+                transition: 0.2s ease-in;
+            }
+            .wrapper #btnBox:checked~.btn-area .btn2 {
+                display: block;
+            }
+            .wrapper #btnBox:checked~.btn-area .btn1 {
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+
+
+
+
+
+
+
+        <!--============ Header Area Start ============-->
+	<div class="wrapper">
+		<input id="btnBox" type="checkbox">
+		<ul>
+			<li style="background-image: url(https://images.pexels.com/photos/3493777/pexels-photo-3493777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+			<li style="background-image: url(https://images.pexels.com/photos/3761178/pexels-photo-3761178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+			<li style="background-image: url(https://images.pexels.com/photos/6152103/pexels-photo-6152103.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+			<li style="background-image: url(https://images.pexels.com/photos/694587/pexels-photo-694587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+			<li style="background-image: url(https://images.pexels.com/photos/3264706/pexels-photo-3264706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+			<li style="background-image: url(https://images.pexels.com/photos/2448248/pexels-photo-2448248.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+			<li style="background-image: url(https://images.pexels.com/photos/783795/pexels-photo-783795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+			<li style="background-image: url(https://images.pexels.com/photos/9892462/pexels-photo-9892462.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+			<li style="background-image: url(https://images.pexels.com/photos/3762569/pexels-photo-3762569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)"></li>
+		</ul><label class="btn-area" for="btnBox"><span class="btn1">LOAD MORE</span> <span class="btn2">LOAD LESS</span></label>
+	</div>
+
+        <!--============ Header Area End ============-->
+
+
+
+
+
+
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+    </body>
+</html>
