@@ -1,0 +1,538 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #00ad00;
+    --white: #ffffff;
+    --black: #323232;
+    --border:#ced4da;
+    --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --hover: #00ad00;
+}
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+select:focus{
+    outline: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+.padding_left_zero{
+    padding-left: 0px !important;
+}
+.padding_right_zero{
+    padding-right: 0px !important;
+}
+.section_padding{
+    padding: 60px 0px;
+}
+.section_padding_bottom{
+    padding-bottom: 60px;
+}
+.section_padding_bottom{
+    padding-top: 60px;
+}
+.section_top_space{
+    padding-top: 60px;
+}
+
+
+/*
+==============================================================
+    Customer Comment Area Css
+==============================================================
+*/
+.customer_comment_title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+}
+.customer_comment_avarage_rating {
+    font-size: 40px;
+}
+.customer_comment_rating_name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: var(--white);
+    position: relative;
+    background-color: var(--primary_color);
+    padding: 0 12px 0 4px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 2px 0 0 2px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    gap: 5px;
+}
+.customer_comment_rating_name:after {
+    content: " ";
+    position: absolute;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid var(--primary_color);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+.customer_comment_rating {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.customer_comment_rating_name i {
+    font-size: 15px;
+}
+.customer_comment_rating span {
+    color: var(--primary_color);
+    font-size: 18px;
+}
+.comment_customer_name h5 {
+    font-size: 16px;
+}
+.comment_customer_rating span {
+    font-size: 14px;
+}
+.comment_customer_rating {
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+.customer_comment_review_content {
+    max-height: 450px;
+    overflow: auto;
+}
+.customer_comment_review_content::-webkit-scrollbar {
+    width: 5px;
+}
+.customer_comment_review_content::-webkit-scrollbar-thumb {
+    background: var(--primary_color);
+}
+.customer_comment_list ul{
+    margin: 0;
+    padding: 0;
+}
+.customer_comment_list ul li {
+    display: block;
+    overflow: hidden;
+    list-style: none;
+    border-top: 1px solid var(--border);
+    padding: 20px 0px;
+}
+.customer_comment_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+}
+.customer_comment_btn_link {
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 3px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.customer_comment_btn_link:hover{
+    color: var(--hover);
+}
+.modal_content {
+    padding: 20px;
+}
+.modal_comment_item {
+    margin-bottom: 10px;
+}
+.modal_comment_item input {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    outline: none;
+    padding: 8px 10px;
+}
+.modal_comment_item_textarea textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    outline: none;
+    padding: 8px 10px;
+}
+.modal_comment_item_btn {
+    text-align: center;
+}
+.modal_comment_item_btn_link {
+    border: none;
+    padding: 8px 15px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 3px;
+    display: inline-block;
+}
+.modal_star_span {
+    margin-top: 8px;
+    display: block;
+    margin-bottom: 10px;
+}
+.modal_star_span i {
+    color: #dddddd;
+    cursor: pointer;
+}
+.star_active{
+    color: var(--black) !important;
+    cursor: pointer;
+}
+.customer_comment_item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.customer_comment_item_star {
+    width: 100px;
+}
+.customer_comment_item_star span {
+    font-size: 14px;
+    line-height: 24px;
+}
+.customer_comment_item_percentage_segment {
+    width: 200px;
+    background-color: var(--border);
+    height: 10px;
+    display: block;
+}
+.customer_comment_item_percentage {
+    width: 40px;
+    text-align: right;
+}
+.customer_comment_item_percentage_segment span {
+    background-color: var(--black);
+    height: 10px;
+    display: block;
+}
+.customer_comment_image img {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 5px;
+}
+.customer_comment_image {
+    margin-top: 10px;
+}
+.customer_comment_view_all_link {
+    color: var(--black);
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 22px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.customer_comment_view_all_link:hover{
+    color: var(--hover);
+}
+.customer_comment_view_all {
+    text-align: center;
+}
+
+
+
+
+.comments_pagination {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.comments_pagination ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.comments_pagination ul li {
+    list-style: none;
+    float: left;
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.comments_pagination ul li:last-child {
+    border-right: 1px solid var(--border);
+}
+.comments_pagination ul li .comments_pagination_link {
+    color: var(--black);
+    display: inline-block;
+    padding: 3px 15px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.comments_pagination ul li .comments_pagination_link:hover{
+    color: var(--hover);
+}
+.comments_pagination_active {
+    background-color: var(--primary_color);
+}
+.comments_pagination_active:hover{
+    color: var(--black) !important;
+}
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .customer_comment_avarage_rating {
+        font-size: 20px;
+    }
+    .customer_comment_rating_name {
+        height: 26px;
+        font-size: 14px;
+    }
+    .customer_comment_rating_name:after {
+        border-top: 27px solid var(--primary_color);
+    }
+    .customer_comment_rating_name i {
+        font-size: 12px;
+    }
+    .customer_comment_rating span {
+        font-size: 14px;
+    }
+    .customer_comment_rating {
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+    .customer_comment_item {
+        gap: 5px;
+    }
+    .customer_comment_item_percentage_segment {
+        width: 150px;
+    }
+    .customer_comment_title {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .customer_comment_rating {
+        text-align: center;
+    }
+    .customer_comment_rating_count {
+        text-align: center;
+    }
+    .comments_pagination {
+        text-align: center;
+    }
+    .customer_comment_image img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .customer_comment_review_content {
+        max-height: 350px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 350px) {
+
+}

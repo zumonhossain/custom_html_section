@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .left-menu {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        background-color: #333;
+        padding-top: 20px;
+        transition: 0.5s;
+      }
+
+      .left-menu a {
+        padding: 10px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .left-menu a:hover {
+        background-color: #555;
+      }
+
+      .left-menu i {
+        margin-right: 10px;
+      }
+
+      .close-icon {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        cursor: pointer;
+        color: white;
+      }
+
+      .content {
+        margin-left: 200px;
+        padding: 16px;
+      }
+    </style>
+    <title>Your Page Title</title>
+  </head>
+  <body>
+    <div class="left-menu" id="leftMenu">
+      <span class="close-icon" onclick="closeMenu()"
+        ><i class="fas fa-times"></i
+      ></span>
+      <a href="#"><i class="fas fa-home"></i> Home</a>
+      <a href="#"><i class="fas fa-user"></i> Profile</a>
+      <a href="#"><i class="fas fa-cog"></i> Settings</a>
+    </div>
+
+    <div class="content">
+      <p>Your main content goes here.</p>
+    </div>
+
+    <button class="openMenu" onclick="openMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <script>
+      function openMenu() {
+        document.getElementById("leftMenu").style.left = "0";
+      }
+
+      function closeMenu() {
+        document.getElementById("leftMenu").style.left = "-200px";
+      }
+    </script>
+  </body>
+</html>

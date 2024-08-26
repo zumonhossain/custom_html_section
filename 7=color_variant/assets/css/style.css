@@ -1,0 +1,252 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #00ad00;
+    --white: #ffffff;
+    --black: #323232;
+    --border:#ced4da;
+    --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --hover: #00ad00;
+}
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+select:focus{
+    outline: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+.padding_left_zero{
+    padding-left: 0px !important;
+}
+.padding_right_zero{
+    padding-right: 0px !important;
+}
+.section_padding{
+    padding: 60px 0px;
+}
+.section_padding_bottom{
+    padding-bottom: 60px;
+}
+.section_padding_bottom{
+    padding-top: 60px;
+}
+.section_top_space{
+    padding-top: 60px;
+}
+/*
+==============================================================
+    Tooltips Area Css
+==============================================================
+*/
+
+
+
+
+
+
+/*
+==============================================================
+    Auth Area Css
+==============================================================
+*/
+
+
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+   
+}
+
+@media screen and (max-width: 576px) {
+    
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 350px) {
+
+}

@@ -1,0 +1,380 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #00ad00;
+    --white: #ffffff;
+    --black: #323232;
+    --border:#ced4da;
+    --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --hover: #00ad00;
+}
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+select:focus{
+    outline: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+/*
+==============================================================
+    Footer Area Css
+==============================================================
+*/
+.footer_area {
+    background-color: var(--primary_color);
+    padding-top: 60px;
+}
+.footer_logo img {
+    height: 50px;
+}
+.footer_description {
+    margin-top: 15px;
+}
+.footer_description p {
+    color: var(--white);
+}
+.footer_title {
+    margin-bottom: 15px;
+}
+.footer_title h4 {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
+.footer_title h4::after {
+    content: '';
+    width: 60%;
+    background: var(--white);
+    height: 2px;
+    display: block;
+    margin-top: 1px;
+}
+.footer_list ul{
+    margin: 0;
+    padding: 0;
+}
+.footer_list ul li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+.footer_list ul li:last-child {
+    margin-bottom: 0px;
+}
+.footer_list ul li .footer_list_link{
+    display: inline-block;
+    color: var(--white);
+    font-size: 16px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.footer_list ul li .footer_list_link:hover{
+    color: var(--white);
+}
+.footer_payment_method img {
+    width: 100%;
+}
+.footer_bottom {
+    border-top: 1px solid var(--border);
+    padding: 10px 0px;
+}
+.footer_copyright p {
+    color: var(--white);
+}
+.footer_develop_by {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+}
+.footer_develop_by {
+    float: right;
+}
+.footer_develop_by p {
+    color: var(--white);
+}
+.footer_develop_by_link {
+    color: var(--black);
+    font-weight: 500;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.footer_develop_by_link:hover {
+    color: red;
+}
+.footer_social {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.footer_social ul{
+    margin: 0;
+    padding: 0;
+}
+.footer_social ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 3px;
+}
+.footer_social ul li:last-child {
+    margin-right: 0px;
+}
+.footer_social ul li .footer_social_link {
+    display: block;
+    border: 1px solid var(--border);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 3px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.footer_social ul li .footer_social_link:hover {
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    color: var(--black);
+}
+.footer_iframe iframe {
+    width: 100%;
+    height: 120px;
+}
+
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 992px) {
+    .footer_middle {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .footer_copyright {
+        text-align: center;
+    }
+    .footer_develop_by {
+        float: inherit;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer_logo {
+        text-align: center;
+    }
+    .footer_area {
+        padding-top: 30px;
+    }
+    .footer_social ul li .footer_social_link {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 350px) {
+
+}

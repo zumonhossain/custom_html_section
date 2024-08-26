@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+  margin:0px;
+}
+.popup {
+  position:fixed;
+  top:-100vh;
+  left:0px;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  transition:top 0ms ease-in-out 300ms;
+}
+.popup.active {
+  transition:top 0ms ease-in-out;
+  top:0vh;
+}
+.popup .popup-container {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(1.2);
+  width:400px;
+  padding:30px 20px 20px;
+  background:#eee;
+  opacity:0.5;
+  transition:all 300ms ease-in-out;
+}
+.popup.active .popup-container {
+  opacity:1;
+  transform:translate(-50%,-50%) scale(1);
+}
+.popup .popup-container .popup-close {
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:30px;
+  height:30px;
+  background:#111;
+  text-align:center;
+  line-height:30px;
+  color:#eee;
+  border-radius:50%;
+  font-size:20px;
+  font-weight:600;
+  cursor:pointer;
+}
+.popup .popup-container h1 {
+  text-align:center;
+  font-size:30px;
+  font-family:"Raleway";
+  color:#222;
+}
+.popup .popup-container p {
+  margin-top:10px;
+  font-size:15px;
+  font-family:"Raleway";
+  color:#555;
+}
+  </style>
+</head>
+<body>
+
+
+
+  <div class="popup">
+    <div class="popup-container">
+      <h1>Title</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum officia possimus consequuntur repellendus quaerat natus commodi recusandae dicta aut ipsam illo dolor consectetur assumenda, quo, in voluptatem maxime dignissimos neque!</p>
+      <div class="popup-close">&times;</div>
+    </div>
+  </div>
+  
+  <button id="open-popup">Open Popup</button>
+
+
+
+  <script>
+    document.querySelector("#open-popup").addEventListener("click",function(){
+  document.querySelector(".popup").classList.add("active");
+});
+
+document.querySelector(".popup .popup-container .popup-close").addEventListener("click",function(){
+  document.querySelector(".popup").classList.remove("active");
+});
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #00ad00;
+    --white: #ffffff;
+    --black: #323232;
+    --border:#ced4da;
+    --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --hover: #00ad00;
+}
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+select:focus{
+    outline: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+.section_padding{
+    padding: 60px 0px;
+}
+.section_padding_bottom{
+    padding-bottom: 60px;
+}
+.section_padding_bottom{
+    padding-top: 60px;
+}
+.section_top_space{
+    padding-top: 60px;
+}
+/*
+==============================================================
+    Product Cart Area Css
+==============================================================
+*/
+.product_cart {
+    border: 1px solid var(--border);
+    padding: 8px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.product_cart:hover{
+    -webkit-box-shadow: 1px 12px 13px -12px rgba(0,0,0,0.5);
+            box-shadow: 1px 12px 13px -12px rgba(0,0,0,0.5);
+}
+.product_image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-height: 265px;
+}
+.product_image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.product_discount {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background-color: #dc3545;
+    color: var(--white);
+    padding: 0px 15px 0px 10px;
+    font-size: 12px;
+    text-align: center;
+}
+.product_name {
+    line-height: 0px;
+}
+.product_name_link {
+    font-size: 16px;
+    color: var(--black);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    line-height: 18px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    height: 20px;
+}
+.product_name_link:hover{
+    color: var(--hover);
+    display: inline-block;
+}
+.product_price {
+    margin-bottom: 7px;
+    text-align: center;
+}
+.product_new_price {
+    font-size: 16px;
+}
+.product_discount_price {
+    font-size: 16px;
+    color: #94a3b8;
+    text-decoration: line-through;
+    padding-left: 8px;
+}
+.product_btn_link {
+    color: var(--primary_color);
+    display: block;
+    border: 1px solid var(--border);
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 3px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.product_cart .product_btn_link:hover{
+    color: var(--black) !important;
+}
+.product_cart:hover .product_btn_link{
+    color: var(--hover);
+    border: 1px solid var(--hover);
+}
+
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .product_image {
+        max-height: 175px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .product_image {
+        max-height: 220px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .product_name_link {
+        font-size: 14px;
+    }
+    .product_name_link {
+        margin-bottom: 3px;
+    }
+    .product_btn_link {
+        padding: 1px 0px;
+        font-size: 14px;
+    }
+    .product_new_price {
+        font-size: 14px;
+    }
+    .product_discount_price {
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    .product_image {
+        max-height: 160px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .product_image {
+        max-height: 240px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product_image {
+        max-height: 195px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .product_image {
+        max-height: 170px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .product_image {
+        max-height: 155px;
+    }
+}

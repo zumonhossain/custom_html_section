@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Popup</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease;
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        animation: zoomIn 0.3s;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Trigger buttons -->
+    <button data-popup="signupPopup">Signup Popup</button>
+    <button data-popup="galleryPopup">Gallery Popup</button>
+
+    <!-- Modals -->
+    <div id="signupPopup" class="modal">
+      <div class="modal-content">
+        <span class="close" data-popup-close="signupPopup">&times;</span>
+        <p>Your modal content goes here. Signup Popup</p>
+      </div>
+    </div>
+
+    <div id="galleryPopup" class="modal">
+      <div class="modal-content">
+        <span class="close" data-popup-close="galleryPopup">&times;</span>
+        <p>Your modal content goes here. Gallery Popup</p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("click", function (event) {
+          const target = event.target;
+
+          // Open modal
+          if (target.matches("[data-popup]")) {
+            const popupId = target.getAttribute("data-popup");
+            const modal = document.getElementById(popupId);
+
+            modal.style.display = "block";
+            setTimeout(() => {
+              modal.style.opacity = 1;
+            }, 10);
+          }
+
+          // Close modal
+          if (target.matches(".close") || target.matches(".modal")) {
+            const modal = target.closest(".modal");
+
+            if (modal) {
+              modal.style.opacity = 0;
+              setTimeout(() => {
+                modal.style.display = "none";
+              }, 300);
+            }
+          }
+      });
+    </script>
+  </body>
+</html>

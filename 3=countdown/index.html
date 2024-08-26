@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!--Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/plugin/owl.carousel.min.css">
+        <!-- Magnific popup -->
+        <link rel="stylesheet" href="assets/css/plugin/magnific-popup.min.css">
+        <!-- Nice Select -->
+        <link rel="stylesheet" href="assets/css/plugin/nice-select.css">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+        <style>
+                
+        </style>
+    </head>
+    <body>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="">
+                        <div id="timer">
+                            <div class="counter">
+                                <div class="box">
+                                    <span id="days"></span>
+                                    <p>Days</p>
+                                </div>
+                                <div class="box">
+                                    <span id="hours"></span>
+                                    <p>Hours</p>
+                                </div>
+                                <div class="box">
+                                    <span id="minutes"></span>
+                                    <p>Minutes</p>
+                                </div>
+                                <div class="box">
+                                    <span id="seconds"></span>
+                                    <p>Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            var timer;
+            var compareDate = new Date();
+            compareDate.setDate(compareDate.getDate() + 7);
+    
+            timer = setInterval(function () {
+                timeBetweenDates(compareDate);
+            }, 1000);
+    
+            function timeBetweenDates(toDate) {
+                var dateEntered = toDate;
+                var now = new Date();
+                var difference = dateEntered.getTime() - now.getTime();
+    
+                if (difference <= 0) {
+                    clearInterval(timer);
+                } else {
+    
+                    var seconds = Math.floor(difference / 1000);
+                    var minutes = Math.floor(seconds / 60);
+                    var hours = Math.floor(minutes / 60);
+                    var days = Math.floor(hours / 24);
+    
+                    hours %= 24;
+                    minutes %= 60;
+                    seconds %= 60;
+    
+                    document.getElementById("days").innerHTML = days;
+                    document.getElementById("hours").innerHTML = hours;
+                    document.getElementById("minutes").innerHTML = minutes;
+                    document.getElementById("seconds").innerHTML = seconds;
+                }
+            }
+        </script>
+
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+    </body>
+</html>

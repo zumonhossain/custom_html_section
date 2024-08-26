@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Popups</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Popups</h2>
+
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirmation()">Show Confirmation</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+
+    <script>
+      function showAlert() {
+        window.alert("This is an alert!");
+      }
+
+      function showConfirmation() {
+        var result = window.confirm("Do you want to proceed?");
+        if (result) {
+          alert("User clicked OK!");
+        } else {
+          alert("User clicked Cancel!");
+        }
+      }
+
+      function showPrompt() {
+        var userInput = window.prompt("Please enter your name:", "John Doe");
+        if (userInput !== null) {
+          alert("Hello, " + userInput + "!");
+        } else {
+          alert("User clicked Cancel!");
+        }
+      }
+    </script>
+  </body>
+</html>

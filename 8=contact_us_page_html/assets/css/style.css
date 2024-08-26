@@ -1,0 +1,335 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #00ad00;
+    --white: #ffffff;
+    --black: #323232;
+    --border:#ced4da;
+    --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --hover: #00ad00;
+}
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+select:focus{
+    outline: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+.section_padding{
+    padding: 60px 0px;
+}
+.section_padding_bottom{
+    padding-bottom: 60px;
+}
+.section_padding_bottom{
+    padding-top: 60px;
+}
+.section_top_space{
+    padding-top: 60px;
+}
+/*
+==========================================
+    Contact Us Area Css
+==========================================
+*/
+.single_contact_us {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    padding: 20px;
+    height: 100%;
+}
+.contact_us_title {
+    margin-bottom: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+}
+.contact_us_title i {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--black);
+}
+.contact_us_title strong {
+    color: var(--black);
+    font-size: 18px;
+    line-height: 28px;
+}
+.contact_us_location p{
+    color: var(--black);
+}
+.contact_us_communication ul{
+    margin: 0;
+    padding: 0;
+}
+.contact_us_communication ul li{
+    list-style: none;
+}
+.contact_us_communication ul li .contact_us_communication_link {
+    display: inline-block;
+    color: var(--text);
+    font-weight: 400;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.contact_us_communication ul li .contact_us_communication_link:hover {
+    color: var(--themeColor);
+}
+.contact_us_socialmedia ul li {
+    display: inline-block;
+    margin-top: 5px;
+}
+.contact_us_socialmedia ul li .contact_us_socialmedia_link {
+    display: block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    color: var(--white);
+    font-size: 16px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.contact_us_socialmedia ul li .contact_us_socialmedia_link:hover{
+    color: var(--themeColor);
+    background-color: var(--white);
+    border: 1px solid var(--primary_color);
+}
+.contact_us_form_item input,
+.contact_us_form_item textarea,
+.contact_us_form_item select {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 3px;
+    color: var(--black);
+}
+.contact_us_form_btn_link {
+    background-color: var(--primary_color);
+    color: var(--white);
+    font-weight: 500;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.contact_us_form_btn_link:hover {
+    color: var(--black);
+}
+
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 576px) {
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (max-width: 375px) {
+    
+}
+
+@media screen and (max-width: 345px) {
+    
+}

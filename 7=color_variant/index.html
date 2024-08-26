@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!--Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/plugin/owl.carousel.min.css">
+        <!-- Magnific popup -->
+        <link rel="stylesheet" href="assets/css/plugin/magnific-popup.min.css">
+        <!-- Nice Select -->
+        <link rel="stylesheet" href="assets/css/plugin/nice-select.css">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+        <style>
+            .color-list button:hover, .color-list button.active {
+                box-shadow: 0px 1px 2px rgba(1, 15, 28, 0.2);
+            }
+            .color-list button:hover span,
+            .color-list button.active span {
+                transform: translate(-50%, -50%) scale(0.7);
+            }
+            .color-list button {
+                display: inline-block;
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                position: relative;
+                transition: box-shadow 0.2s 0s linear;
+            }
+            a, button {
+                color: inherit;
+                outline: none;
+                border: none;
+                background: transparent;
+            }
+            .color-list button span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                background-color: green;
+                border-radius: 50%;
+                transition: all 0.2s 0s linear;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+
+
+
+    </head>
+    <body>
+
+        <!--============ Auth Area Start ============-->
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mt-5">
+                    <div class="color-list">
+                        <button type="button" class="active">
+                            <span style="background-color: rgb(248, 182, 85);"></span>
+                        </button>
+                        <button type="button">
+                            <span style="background-color: rgb(203, 203, 203);"></span>
+                        </button>
+                        <button type="button">
+                            <span style="background-color: rgb(73, 78, 82);"></span>
+                        </button>
+                        <button type="button">
+                            <span style="background-color: rgb(207, 105, 115);"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+       </div>
+      <!--============ Auth Area End ============-->
+
+
+       <script>
+            // active image start
+            var color = document.querySelectorAll("button");
+
+            color.forEach( i => {
+                i.addEventListener("click",()=>{
+                    resetLinks();
+                    i.classList.add("active");
+                })
+            })
+
+            function resetLinks(){
+                color.forEach(i => {
+                    i.classList.remove("active")
+                })
+            }
+       </script>
+
+
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+    </body>
+</html>

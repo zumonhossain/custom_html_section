@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!--Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/plugin/owl.carousel.min.css">
+        <!-- Magnific popup -->
+        <link rel="stylesheet" href="assets/css/plugin/magnific-popup.min.css">
+        <!-- Nice Select -->
+        <link rel="stylesheet" href="assets/css/plugin/nice-select.css">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+        <style>
+            ._cart_ {
+                position: relative;
+                display: inline-block;
+            }
+            .tooltips {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #323232;
+                color: #ffffff;
+                font-size: 14px;
+                line-height: 24px;
+                display: inline-block;
+                padding: 0px 10px;
+                border-radius: 3px;
+                visibility: hidden;
+                opacity: 0;
+                transition: .3s;
+            }
+            .tooltips::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                border: 8px solid;
+                transform: translateX(-50%);
+                border-color: #323232 #0000 #0000 #0000;
+            }
+            ._cart_:hover .tooltips{
+                top: -100%;
+                visibility: visible;
+                opacity: 1;
+            }
+        </style>
+
+
+
+    </head>
+    <body>
+
+
+
+
+        <!--============ Auth Area Start ============-->
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mt-5">
+                    <div class="_cart_">
+                        <h3>
+                            Tooltips
+                        </h3>
+                        <span class="tooltips">Tooltips</span>
+                    </div>
+                </div>
+            </div>
+       </div>
+      <!--============ Auth Area End ============-->
+
+
+
+
+
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+    </body>
+</html>

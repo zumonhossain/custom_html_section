@@ -1,0 +1,346 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #00ad00;
+    --white: #ffffff;
+    --black: #323232;
+    --border:#ced4da;
+    --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --hover: #00ad00;
+}
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+select:focus{
+    outline: none;
+}
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 16px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+.padding_left_zero{
+    padding-left: 0px !important;
+}
+.padding_right_zero{
+    padding-right: 0px !important;
+}
+.section_padding{
+    padding: 60px 0px;
+}
+.section_padding_bottom{
+    padding-bottom: 60px;
+}
+.section_padding_bottom{
+    padding-top: 60px;
+}
+.section_top_space{
+    padding-top: 60px;
+}
+/*
+==============================================================
+    Profile Area Css
+==============================================================
+*/
+.profile_left_side {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+}
+.profile_pic {
+    width: 150px;
+    margin: 0 auto;
+}
+.profile_pic img {
+    max-width: 100%;
+    height: auto;
+}
+.profile_name {
+    text-align: center;
+    margin-top: 15px;
+}
+.profile_menu_list {
+    margin-top: 20px;
+}
+.profile_menu_list ul{
+    margin: 0;
+    padding: 0;
+}
+.profile_menu_list ul li {
+    list-style: none;
+    display: block;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0px;
+}
+.profile_menu_list ul li:last-child {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+}
+.profile_menu_list ul li .profile_menu_list_link{
+    display: block;
+    color: var(--black);
+    font-size: 16px;
+    text-transform: uppercase;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.profile_menu_list ul li .profile_menu_list_link:hover{
+    color: var(--hover);
+}
+.profile_menu_list ul li .profile_menu_list_link i{
+    padding-right: 8px;
+}
+.profile_oder_view_link {
+    background-color: var(--primary_color);
+    color: var(--white);
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.profile_oder_view_link:hover{
+    color: var(--black);
+}
+.profile_oder_cancel_btn {
+    border: none;
+    background-color: #df5c39;
+    color: var(--white);
+    font-size: 14px;
+    padding: 3px 10px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.profile_oder_cancel_btn:hover{
+    color: var(--black);
+}
+.order_status {
+    background-color: var(--primary_color);
+    color: var(--white);
+    font-size: 13px;
+    display: inline-block;
+    padding: 0px 5px;
+    border-radius: 20px;
+}
+.order_discount {
+    background-color: var(--primary_color);
+    color: var(--white);
+    font-size: 13px;
+    display: inline-block;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0px 5px;
+}
+.profile_right_side {
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.profile_page_order_view table tbody tr td strong {
+    width: 120px !important;
+    display: block;
+}
+
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 350px) {
+
+}

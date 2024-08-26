@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!--Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/plugin/owl.carousel.min.css">
+        <!-- Magnific popup -->
+        <link rel="stylesheet" href="assets/css/plugin/magnific-popup.min.css">
+        <!-- Nice Select -->
+        <link rel="stylesheet" href="assets/css/plugin/nice-select.css">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+        <style>
+                .product {
+                    display: inline-block;
+                }
+                .product img {
+                    width: 200px;
+                    height: auto;
+                }
+                .cart {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background-color: #f0f0f0;
+                    padding: 10px 15px;
+                    border-radius: 50%;
+                }
+                .cart img {
+                    width: 40px;
+                    height: auto;
+                }
+                .cart .item-count {
+                    background-color: #ff0000;
+                    color: #fff;
+                    padding: 5px 10px;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                }
+
+        </style>
+
+
+
+    </head>
+    <body>
+
+
+
+
+        <!--============ Auth Area Start ============-->
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mt-5">
+                    <div class="product">
+                        <img src="assets/images/product/1.jpeg" alt="Product Image">
+                        <button class="add-to-cart">Add to Cart</button>
+                      </div>
+                    
+                      
+                    
+                      <!-- <div class="cart-item"></div> -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="cart">
+                        <img src="assets/images/product/18.jpeg" alt="Cart Icon">
+                        <span class="item-count">0</span>
+                      </div>
+                </div>
+            </div>
+       </div>
+      <!--============ Auth Area End ============-->
+
+
+
+
+
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+
+        <script>
+            $(document).ready(function() {
+                $('.add-to-cart').click(function() {
+                    var product = $(this).closest('.product');
+                    var productImage = product.find('img').attr('src');
+                    var productName = product.find('h3').text();
+                    
+                    // Clone the product image
+                    var cloneImage = $('<img>').attr('src', productImage).addClass('fly-img');
+                    $('body').append(cloneImage);
+
+                    // Animation for the cloned image
+                    cloneImage.css({
+                    'position': 'absolute',
+                    'top': product.offset().top + 'px',
+                    'left': product.offset().left + 'px',
+                    'width': product.width() + 'px',
+                    'height': product.height() + 'px',
+                    'z-index': 9999
+                    }).animate({
+                    'top': $('.cart').offset().top + 'px',
+                    'left': $('.cart').offset().left + 'px',
+                    'width': '40px',
+                    'height': 'auto'
+                    }, 1000, function() {
+                    $(this).remove();
+                        $('.item-count').text(parseInt($('.item-count').text()) + 1);
+                        $('.cart-item').html(productName).fadeIn().delay(500).fadeOut();
+                    });
+
+                    // Shake effect for the cart
+                    $('.cart').addClass('shake');
+                        setTimeout(function() {
+                        $('.cart').removeClass('shake');
+                    }, 500);
+                });
+            });
+
+        </script>
+
+    </body>
+</html>

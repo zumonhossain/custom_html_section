@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!--Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/plugin/owl.carousel.min.css">
+        <!-- Magnific popup -->
+        <link rel="stylesheet" href="assets/css/plugin/magnific-popup.min.css">
+        <!-- Nice Select -->
+        <link rel="stylesheet" href="assets/css/plugin/nice-select.css">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+
+
+
+
+
+
+
+        <!--============ Header Area Start ============-->
+        <header class="header_area">
+
+            <!-- header top start -->
+            <div class="header_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 d-none d-lg-block">
+                            <div class="header_top_site_title">
+                                <p>Welcome to ecommerce.mohasagorit.solutions</p>
+                            </div>
+                        </div>
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                            <div class="header_top_list">
+                                <ul>
+                                    <li>
+                                        <a href="order_tracking.html" class="header_top_list_link">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            Order Tracking
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="about_us.html" class="header_top_list_link">
+                                            <i class="fa-solid fa-info"></i>
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact_us.html" class="header_top_list_link">
+                                            <i class="fa-solid fa-headset"></i>
+                                            Contact
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="profile_dashboard.html" class="header_top_list_link header_top_list_auth">
+                                            Zumon
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top end -->
+
+            <!-- header middle start -->
+            <div class="header_middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-3 col-xl-3 col-lg-2 d-none d-lg-block">
+                            <div class="header_middle_logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo/logo.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                            
+                            <!-- header mobile device start -->
+                            <div class="header_mobile_device d-lg-none d-md-block">
+                                <div class="header_mobile_table_cell">
+                                    <a class="header_mobile_toggle" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                                        <i class="fa-solid fa-bars"></i>
+                                    </a> <!-- header mobile device toggle end -->
+                                    <div class="header_mobile_logo">
+                                        <a href="index.html">
+                                            <img src="assets/images/logo/logo.png" alt="logo">
+                                        </a>
+                                    </div> <!-- header mobile device logo end -->
+                                    
+                                    <div class="header_mobile_search" onclick="search()">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div> <!-- header mobile device search end -->
+                                </div>
+                            </div>
+                            <!-- header mobile device end -->
+
+                            <div id="search_id" class="header_middle_search_content search_class">
+                                <div class="header_middle_search">
+                                    <input type="text" placeholder="Search Your Products....">
+                                    <button type="submit" class="header_middle_search_link">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                            <!-- header search item  start -->
+                            <div class="header_search_item_content" style="display: none;">
+                                <div class="header_search_item">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="header_search_item_link">
+                                                <div class="header_search_item_content">
+                                                    <div class="header_search_item_product_image">
+                                                        <img src="assets/images/product/1.jpeg" alt="product-image">
+                                                    </div>
+                                                    <div class="header_search_item_product_details">
+                                                        <div class="header_search_item_product_name">
+                                                            <p>Men's Denim Stylish Long dong</p>
+                                                        </div>
+                                                        <div class="header_search_item_product_price">
+                                                            <span class="header_search_item_product_new_price">৳500</span>
+                                                            <span class="header_search_item_product_discount_price">৳500</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header search item  end -->
+
+                            
+
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-5 d-none d-lg-block">
+                            <div class="header_middle_table_cell">
+                                <div class="header_middle_call">
+                                    <a href="tel:0134345353" class="header_middle_call_link">
+                                        <div class="header_middle_call_icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div class="header_middle_call_text">
+                                            <p>Call Us Now:</p>
+                                            <span>01644954478</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="header_middle_wishlist">
+                                    <a href="wishlist.html" class="header_middle_wishlist_link">
+                                        <div class="header_middle_wishlist_icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="header_middle_cart">
+                                    <p>Cart amount</p>
+                                    <span>৳ 54860</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header middle end -->
+
+            <!-- header bottom start -->
+            <div class="header_bottom d-none d-lg-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="main_menu">
+                                <ul>
+                                    <li>
+                                        <a href="shop.html" class="main_menu_link">MENS TOPS</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="main_menu_link">
+                                            MENS BOTTOM
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href="shop.html" class="submenu_link">
+                                                    Submenu
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="submenu_link">
+                                                    Submenu
+                                                    <i class="fa-solid fa-angle-right"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li>
+                                                        <a href="shop.html" class="submenu_link">
+                                                            Sub Submenu
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop.html" class="submenu_link">
+                                                            Sub Submenu
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop.html" class="submenu_link">
+                                                            Sub Submenu
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop.html" class="submenu_link">
+                                                            Sub Submenu
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop.html" class="submenu_link">
+                                                            Sub Submenu
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop.html" class="submenu_link">
+                                                            Sub Submenu
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop.html" class="submenu_link">
+                                                            Sub Submenu
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="submenu_link">
+                                                    Submenu
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="submenu_link">
+                                                    Submenu
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="submenu_link">
+                                                    Submenu
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="submenu_link">
+                                                    Submenu
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="submenu_link">
+                                                    Submenu
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="main_menu_link">WOMENS SPECIAL</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="main_menu_link">WINTER COLLECTION</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="main_menu_link">ACCESSORIES</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="main_menu_link">EXPORT</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="main_menu_link">IMPORT</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="main_menu_link">HEALTH & BEAUTY</a>
+                                    </li>
+                                    <li>
+                                        <a href="new_arrival.html" class="main_menu_link">New Arrival</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header bottom end -->
+
+
+            <!-- header mobile device menu start -->
+            <div class="header_mobile_menu offcanvas offcanvas-start"  tabindex="-1" id="offcanvasExample">
+                <div class="header_mobile_top">
+                    <div class="header_mobile_logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header_mobile_close_icon" data-bs-dismiss="offcanvas">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="header_mobile_middle">
+                    <div class="mobile_main_menu">
+                        <ul>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                                <i class="fa-solid fa-angle-down" onclick="mobileSubmenu()"></i>
+                                <ul id="mobile_submenu_id" class="mobile_main_submenu mobile_submenu_class">
+                                    <li>
+                                        <a href="shop.html" class="mobile_main_submenu_link">Submenu</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="mobile_main_submenu_link">Submenu</a>
+                                        <i class="fa-solid fa-angle-down" onclick="mobileSubSubmenu()"></i>
+                                        <ul id="mobile_sub_submenu_id" class="mobile_main_sub_submenu mobile_sub_submenu_class">
+                                            <li>
+                                                <a href="shop.html" class="mobile_main_sub_submenu_link">Sub Submenu</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="mobile_main_sub_submenu_link">Sub Submenu</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="mobile_main_sub_submenu_link">Sub Submenu</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="mobile_main_sub_submenu_link">Sub Submenu</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="mobile_main_sub_submenu_link">Sub Submenu</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="mobile_main_sub_submenu_link">Sub Submenu</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html" class="mobile_main_sub_submenu_link">Sub Submenu</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="mobile_main_submenu_link">Submenu</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="mobile_main_submenu_link">Submenu</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="mobile_main_submenu_link">Submenu</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="mobile_main_submenu_link">Submenu</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="mobile_main_submenu_link">Submenu</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="mobile_main_submenu_link">Submenu</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                            </li>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                            </li>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                            </li>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                            </li>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                            </li>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                            </li>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                            </li>
+                            <li>
+                                <a href="shop.html" class="mobile_main_menu_link">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- header mobile device menu end -->
+
+        </header>
+        <!--============ Header Area End ============-->
+
+
+
+
+
+
+
+        <!-- header mobile menu js start -->
+        <script>
+            function mobileSubmenu(){
+                document.getElementById("mobile_submenu_id").classList.toggle("mobile_submenu_toggle");
+            }
+            function mobileSubSubmenu(){
+                document.getElementById("mobile_sub_submenu_id").classList.toggle("mobile_sub_submenu_toggle");
+            }
+        </script>
+        <!-- header mobile menu js end -->
+
+        <!-- header mobile search js start -->
+        <script>
+            function search(){
+                document.getElementById("search_id").classList.toggle("search_toggle");
+            }
+        </script>
+        <!-- header mobile search js end -->
+
+
+
+
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+    </body>
+</html>
