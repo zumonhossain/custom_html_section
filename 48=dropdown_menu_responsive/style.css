@@ -1,0 +1,193 @@
+/* globals */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background: #09131b;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* header */
+.header-main-menu {
+  background: #122331;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1;
+}
+.header-main-menu a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.dropdown-top-icon {
+  line-height: 24px;
+  margin-left: 7px;
+}
+.header-main-menu ul {
+  list-style: none;
+}
+.header-main-menu-items {
+  display: flex;
+  align-items: center;
+}
+.header-main-menu-items li {
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease-in-out;
+}
+.header-main-menu-items li:hover {
+  background-color: red;
+}
+
+/* dropdown */
+.header-main-menu-dropdown {
+  position: relative;
+}
+.header-main-dropdown-menu,
+.header-main-menu-right {
+  position: absolute;
+  background: #122331;
+  width: 200px;
+  top: 50px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.header-main-menu-right {
+  top: 0;
+  left: 110%;
+}
+.header-main-menu-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-main-menu-dropdown:hover .header-main-dropdown-menu {
+  top: 34px;
+  opacity: 1;
+  visibility: visible;
+}
+.header-main-menu-dropdown-right:hover .header-main-menu-right {
+  left: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* nav menu button */
+.header-main-menu-btn {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.header-main-menu-btn-lines::before,
+.header-main-menu-btn-lines::after {
+  content: "";
+  position: absolute;
+}
+.header-main-menu-btn-lines,
+.header-main-menu-btn-lines::before,
+.header-main-menu-btn-lines::after {
+  width: 1.5rem;
+  height: 0.1rem;
+  background: #ffffff;
+  transition: all 0.5s ease-in-out;
+}
+.header-main-menu-btn-lines::before {
+  transform: translateY(-0.5rem);
+}
+.header-main-menu-btn-lines::after {
+  transform: translateY(0.5rem);
+}
+/* animation */
+.header-main-menu-btn.open .header-main-menu-btn-lines {
+  transform: translateX(2rem);
+  background: transparent;
+}
+.header-main-menu-btn.open .header-main-menu-btn-lines::before {
+  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+  background: #ffffff;
+}
+.header-main-menu-btn.open .header-main-menu-btn-lines::after {
+  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+  background: #ffffff;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 970px) {
+  .header-main-menu-btn {
+    display: flex;
+  }
+
+  .header-main-menu .header-main-menu-items {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: 0;
+    background: #122331;
+    display: block;
+    padding: 1rem;
+    line-height: 3rem;
+    overflow-y: auto;
+    transform: translateY(-100vh);
+    transition: transform 0.3s ease-out;
+  }
+  .header-main-menu-items.open {
+    transform: translateY(0);
+  }
+
+  .header-main-menu-items li {
+    margin: 15px 10px;
+  }
+  .header-main-menu-items li a {
+    padding: 0 1rem;
+    display: block;
+    font-size: 1.4rem;
+  }
+  .header-main-menu-items li:hover {
+    background-color: transparent;
+  }
+
+  /* DROPDOWN, MEGA MENUS */
+  .header-main-menu-items .header-main-dropdown-menu,
+  .header-main-menu-items .header-main-menu-right{
+    position: static;
+    opacity: 1;
+    top: 4rem;
+    visibility: visible;
+    padding-left: 1rem;
+    width: 100%;
+    max-height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  .header-main-menu-expand-btn.open + .header-main-menu-expandable {
+    max-height: 100%;
+    transform: scaleY(1);
+  }
+
+  .header-main-menu-expandable li {
+    margin: 0;
+  }
+  .header-main-menu-expandable li a {
+    font-size: 1rem;
+  }
+}

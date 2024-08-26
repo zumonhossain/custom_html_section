@@ -1,0 +1,33 @@
+.product_image_content{
+    position: relative;
+}
+.product_image_one img{
+    width: 100%;
+    height: 100%;
+}
+.product_image_two{
+    opacity: 0;
+    overflow: hidden;
+}
+.product_image_two img{
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+.product_image_content:hover .product_image_two{
+    opacity: 1;
+    transition: opacity .5s ease,-webkit-transform 2s cubic-bezier(0,0,.44,1.18);
+    transition: opacity .5s ease,transform 2s cubic-bezier(0,0,.44,1.18);
+    transition: opacity .5s ease,transform 2s cubic-bezier(0,0,.44,1.18),-webkit-transform 2s cubic-bezier(0,0,.44,1.18);
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* right: 0;
+    bottom: 0; */
+}
+.product_image_two:hover > img{
+    transform: scale(1.09);
+    transition: opacity .5s ease,-webkit-transform 2s cubic-bezier(0,0,.44,1.18);
+    transition: opacity .5s ease,transform 2s cubic-bezier(0,0,.44,1.18);
+    transition: opacity .5s ease,transform 2s cubic-bezier(0,0,.44,1.18),-webkit-transform 2s cubic-bezier(0,0,.44,1.18);
+}
