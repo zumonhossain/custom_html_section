@@ -1,0 +1,245 @@
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--black);
+}
+
+:root {
+  --primary_color: #DE4720;
+  --primary_text_color: #ffffff;
+  --white: #ffffff;
+  --black: #323232;
+  --menu_background: #222429;
+  --menu_text_color: #ffffff;
+  --border: #ced4da59;
+  --footer_background: #222429;
+  --footer_text: #ffffff;
+  --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --hover: #ed8b0a;
+}
+
+p {
+  color: var(--black);
+}
+
+a,
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+  outline: 0;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+.table>:not(caption)>*>* {
+  border-bottom: 1px solid var(--border) !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black);
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+*::-moz-placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*::placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*::-moz-selection {
+  background: #000000;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #000000;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #000000;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+/*
+==============================================================
+    Header Area Css
+==============================================================
+*/
+.sticky_header.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 45px;
+  z-index: 999;
+  -webkit-animation-name: fixedHeader;
+          animation-name: fixedHeader;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  background-color: var(--white);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+@-webkit-keyframes fixedHeader {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateY(-60px);
+              transform: translateY(-60px);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+  } 
+}
+@keyframes fixedHeader {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateY(-60px);
+              transform: translateY(-60px);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+  } 
+}
+
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+
+@media screen and (max-width: 1599.98px) {
+
+}
+
+@media screen and (max-width: 1399.98px) {
+
+}
+
+@media screen and (max-width: 1199.98px) {
+
+}
+
+@media screen and (max-width: 991.98px) {
+ 
+}
+
+@media screen and (max-width: 767.98px) {
+  
+}
+
+@media screen and (max-width: 575.98px) {
+  
+}
+@media screen and (max-width: 499.98px) {
+  
+}
+@media screen and (max-width: 374.98px) {
+ 
+}
+@media screen and (max-width: 344.98px) {
+
+}

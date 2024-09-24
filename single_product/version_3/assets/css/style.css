@@ -1,0 +1,186 @@
+/*
+  Theme Name: mohasagorit
+  Author: mohasagorit
+  Support: info@mohasagorit.solutions
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--black);
+}
+
+:root {
+  --primary_color: #fcb800;
+  --white: #ffffff;
+  --black: #323232;
+  --menu_text_color: #ffffff;
+  --menu_background: #fcb800;
+  --border: #ced4da;
+  --shadow: 0px 1px 4px 1px #5555;
+  --hover: #fcb800;
+}
+p {
+  color: var(--black);
+}
+
+a,
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+  outline: 0;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--black);
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+*::-moz-placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*::-webkit-input-placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*:-ms-input-placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*::-ms-input-placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*::placeholder {
+  color: #555555;
+  opacity: 1;
+  font-size: 16px;
+}
+
+*::-moz-selection {
+  background: #ffffff;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #ffffff;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ffffff;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+/*
+==============================================================
+    Single Product Area Css
+==============================================================
+*/
+

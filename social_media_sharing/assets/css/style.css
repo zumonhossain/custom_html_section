@@ -1,0 +1,350 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #ffaa17;
+    --white: #ffffff;
+    --black: #222429;
+    --text: #686a6f;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--allHeadingColor);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+.section_padding {
+    padding: 120px 0px;
+}
+
+.section_padding_top {
+    padding-top: 120px;
+}
+
+.section_padding_bottom {
+    padding-bottom: 120px;
+}
+
+.section_top_space {
+    padding-top: 50px;
+}
+
+.section_bg {
+    background-color: var(--sectionBackground);
+}
+
+/*
+==============================================================
+    Fixed Communication Social Css
+==============================================================
+*/
+.fixed_communication_social .fixed_communication_toggle {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    width: 45px;
+    /* height: 45px; */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999999;
+    animation: ripple-red 1s linear infinite;
+    transition: .5s;
+}
+.fixed_communication_social .fixed_communication_toggle svg {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.fixed_communication_social .fixed_communication_toggle svg:nth-child(1) {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+.fixed_communication_social.fixed_communication_social_active .fixed_communication_toggle svg:nth-child(1) {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+.fixed_communication_social.fixed_communication_social_active .fixed_communication_toggle svg:nth-child(2) {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+.fixed_communication_social.fixed_communication_social_active {
+    position: relative;
+    z-index: 999999;
+}
+.communication_social {
+    position: fixed;
+    bottom: 40px;
+    right: 33px;
+}
+.communication_social ul li {
+    transition: .3s;
+}
+.communication_social ul li:last-child {
+    margin-bottom: 0px;
+}
+.communication_social ul li a {
+    border-radius: 100%;
+    color: #ffffff;
+    position: relative;
+}
+.communication_social ul li a p {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: max-content;
+    margin-right: 15px;
+    background-color: #ffffff;
+    color: #333333;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5px 8px;
+    height: 25px;
+    line-height: 18px;
+    font-size: 14px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.communication_social ul li:hover a p {
+    opacity: 1;
+    visibility: visible;
+}
+.communication_social ul li a p::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-left: 10px solid #e9ecef61;
+    border-bottom: 10px solid transparent;
+}
+.fixed_communication_social .communication_social ul li:nth-child(1)  {
+    transform: translateY(40px);
+}
+.fixed_communication_social.fixed_communication_social_active .communication_social ul li:nth-child(1)  {
+    transform: translateY(-60px);
+}
+.fixed_communication_social.fixed_communication_social_active .communication_social ul li:nth-child(2)  {
+    transform: translateY(-50px);
+}
+.fixed_communication_social .fixed_communication_toggle p {
+    width: max-content;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+    background-color: #ffffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 1px 10px;
+    margin-right: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.fixed_communication_social .fixed_communication_toggle p::before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-left: 10px solid #e9ecef61;
+    border-bottom: 10px solid transparent;
+    transition: .3s;
+}
+.fixed_communication_social.fixed_communication_social_active .fixed_communication_toggle:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+.fixed_communication_social .fixed_communication_toggle svg ellipse {
+    fill: var(--primary_color);
+    stroke: none;
+}
+.fixed_communication_social .fixed_communication_toggle svg g circle {
+    fill: var(--primary_color);
+    stroke: none;
+}
+

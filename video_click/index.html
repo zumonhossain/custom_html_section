@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!--Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/plugin/owl.carousel.min.css">
+        <!-- Magnific popup -->
+        <link rel="stylesheet" href="assets/css/plugin/magnific-popup.min.css">
+        <!-- Nice Select -->
+        <link rel="stylesheet" href="assets/css/plugin/nice-select.css">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+        <style>
+            .vide_content {
+                position: relative;
+            }
+            .vide_content video {
+                width: 100%;
+            }
+            .video_animation {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .video_icon {
+                background: var(--white);
+                height: 100px;
+                width: 100px;
+                text-align: center;
+                border-radius: 50%;
+                line-height: 100px;
+                font-size: 30px;
+                -webkit-transition: .5s -webkit-animation ripple-red 1s linear infinite;
+                animation: ripple-red 1s linear infinite;
+                -webkit-transition: .5s;
+                display: flex;
+                margin: 0 auto;
+                align-items: center;
+                justify-content: center;
+                color: var(--primary_color);
+                cursor: pointer;
+            }
+            @-webkit-keyframes ripple-red {
+                0% {
+                    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
+                    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3)
+                }
+                100% {
+                    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
+                    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(2241, 42, 2, 0)
+                }
+            }
+        </style>
+
+
+
+    </head>
+    <body>
+
+        <!--============ Video Area Start ============-->
+        <div class="vide_content section_padding_top">
+            <video id="myVideo">
+                <source src="https://risingtheme.com/html/demo-newvilla/newvilla/assets/video/background.mp4" type="video/mp4">
+            </video>
+            
+            <div class="video_animation" id="videoAnimation">
+                <div class="video_icon">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+        </div>
+        <!--============ Video Area End ============-->
+
+        <script>
+            var video = document.getElementById("myVideo");
+            var videoAnimation = document.getElementById("videoAnimation");
+            videoAnimation.addEventListener("click", function() {
+                video.play();
+                videoAnimation.style.display = "none";
+            });
+            video.addEventListener("click", function() {
+                if (video.paused) {
+                    video.play();
+                    videoAnimation.style.display = "none";
+                } else {
+                    video.pause();
+                    videoAnimation.style.display = "block";
+                }
+            });
+        </script>
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+
+        <script>
+            // testimonial_active
+            $('.client_feedback_active').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                navText: [
+                    '<span class="fa-solid fa-arrow-left-long slider-border-icon"></span>',
+                    '<span class="fa-solid fa-arrow-right-long slider-border-icon"></span>',
+                ],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    767: {
+                        items: 2
+                    },
+                    992: {
+                        items: 2
+                    }
+                }
+            })
+      </script>
+
+    </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Site Title -->
+        <title>Site Title</title>
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- Font Awesome icon -->
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <!--Owl Carousel -->
+        <link rel="stylesheet" href="assets/css/plugin/owl.carousel.min.css">
+        <!-- Magnific popup -->
+        <link rel="stylesheet" href="assets/css/plugin/magnific-popup.min.css">
+        <!-- Nice Select -->
+        <link rel="stylesheet" href="assets/css/plugin/nice-select.css">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+        <style>
+            .fly_image_destination  {
+                position: fixed;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+            }
+            .fly_image_destination i {
+                cursor: pointer;
+            }
+        </style>
+
+
+
+    </head>
+    <body>
+
+        <!--============ Header Area Start ============-->
+        <div class="single_product_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="fly_image_content">
+                            <img src="assets/images/product/1.jpg" id="fly_image">
+                        </div>
+                        <button class="fly_add_to_cart_btn" id="fly_add_to_cart_btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============ Header Area End ============-->
+
+
+        <div class="fly_image_destination" id="fly_image_destination_id">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+
+
+
+        <!-- jquery 3.6.3 -->
+        <script src="assets/js/jquery-3.6.3.min.js"></script>
+        <!-- Bootstrap jS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel jS -->
+        <script src="assets/js/plugin/owl.carousel.min.js"></script>
+        <!-- Magnific popup jS -->
+        <script src="assets/js/plugin/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select jS -->
+        <script src="assets/js/plugin/nice-select.js"></script>
+        <!-- Bar Filler jS -->
+        <script src="assets/js/plugin/skill.bars.jquery.js"></script>
+        <script src="assets/js/plugin/jquery.barfiller.js"></script>
+        <!-- Custom jS -->
+        <script src="assets/js/custom.js"></script>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const flyAddToCart = document.getElementById("fly_add_to_cart_btn");
+                const flyImageDestination = document.getElementById("fly_image_destination_id");
+    
+                flyAddToCart.addEventListener("click", function() {
+                    const flyImage = document.getElementById("fly_image");
+                    const flyImageRect = flyImage.getBoundingClientRect();
+                    const flyImageDestinationRect = flyImageDestination.getBoundingClientRect();
+    
+                    // Clone the image
+                    const flyImg = flyImage.cloneNode(true);
+                    document.body.appendChild(flyImg);
+    
+                    // Set initial style for the cloned image
+                    flyImg.style.position = "absolute";
+                    flyImg.style.top = flyImageRect.top + "px";
+                    flyImg.style.left = flyImageRect.left + "px";
+                    flyImg.style.width = flyImageRect.width + "px";
+                    flyImg.style.height = flyImageRect.height + "px";
+                    flyImg.style.transition = "all 0.8s ease-in-out";
+                    flyImg.style.zIndex = "9999";
+    
+                    // Trigger the animation
+                    setTimeout(() => {
+                    flyImg.style.top = flyImageDestinationRect.top + "px";
+                    flyImg.style.left = flyImageDestinationRect.left + "px";
+                    flyImg.style.width = "0px";
+                    flyImg.style.height = "0px";
+                    flyImg.style.opacity = "0";
+                    }, 90);
+    
+                    // Remove the cloned image after the animation
+                    setTimeout(() => {
+                        document.body.removeChild(flyImg);
+                    }, 3000);
+                });
+            });
+      </script>
+
+    </body>
+</html>

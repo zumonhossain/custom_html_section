@@ -1,0 +1,277 @@
+/*
+  Theme Name: Zumon Hossain
+  Author: zumonhossain.com
+  Support: zumonhossain100@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Google Fonts
+2. Theme Default
+3. Section Heading
+4. Header
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+*/
+
+/*
+==========================================
+    Google Fonts
+==========================================
+*/
+/* font-family: 'Rubik', sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+/*
+==========================================
+    Theme Default Css
+==========================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+:root {
+    --primary_color: #fa4a4a;
+    --primary_text: #ffffff;
+
+    --menu_background: #333333;
+    --menu_text: #333333;
+    --menu_hover: #fa4a4a;
+
+    --footer_background: #1E2027;
+    --footer_text: #b4b4b4;
+    --footer_hover: #fa4a4a;
+
+    --white: #ffffff;
+    --black: #000000;
+    --hover: #ffffff;
+    --border: #e7e7e7;
+    --shadow: -1px 5px 20px 0px rgb(82 90 101 / 10%);
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    color: var(--black);
+}
+
+a,
+.button {
+    -webkit-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+    outline: 0
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--allHeadingColor);
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+*::-moz-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*::-webkit-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*:-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*::-ms-input-placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*::placeholder {
+    color: #555555;
+    opacity: 1;
+    font-size: 14px;
+}
+
+*::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff;
+    color: #fff;
+    text-shadow: none;
+}
+
+.section_padding {
+    padding: 120px 0px;
+}
+
+.section_padding_top {
+    padding-top: 120px;
+}
+
+.section_padding_bottom {
+    padding-bottom: 120px;
+}
+
+.section_top_space {
+    padding-top: 50px;
+}
+
+.section_bg {
+    background-color: var(--sectionBackground);
+}
+
+
+/*
+==============================================================
+    Responsive Area Css
+==============================================================
+*/
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+    .single_product_img_content {
+        display: flex;
+        flex-direction: column;
+    }
+    .single_product_small_img_list {
+        width: 100%;
+        float: inherit;
+    }
+    .single_product_small_img_list ul li {
+        margin-bottom: 0;
+        display: inline-block;
+        margin-right: 1px;
+    }
+    .single_product_small_img_list ul li:last-child{
+        margin-right: 0px;
+    }
+    .single_product_small_img_list ul li button {
+        width: 45px;
+        height: 45px;
+    }
+    .single_product_preview_img_content {
+        order: 1;
+    }
+    .single_product_small_img_list {
+        order: 2;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 350px) {
+
+}
