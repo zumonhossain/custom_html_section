@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Example</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Modal styles */
+    .modalss {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-contentssss {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .close-btnsss {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .open-btnsss {
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="openModalBtnsss">Open Modal</button>
+
+  <!-- Modal structure -->
+  <div class="modalss" id="myModalsss">
+    <div class="modal-contentssss">
+      <h2>Modal Title</h2>
+      <p>This is a modal window.</p>
+      <button class="close-btnsss" id="closeModalBtnssss">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Get references to the modal and buttons
+    const modalss = document.getElementById('myModalsss');
+    const openModalBtnsss = document.getElementById('openModalBtnsss');
+    const closeModalBtnssss = document.getElementById('closeModalBtnssss');
+
+    // Open modal functionality
+    openModalBtnsss.addEventListener('click', () => {
+      modalss.style.display = 'flex'; // Show the modal
+    });
+
+    // Close modal functionality
+    closeModalBtnssss.addEventListener('click', () => {
+      modalss.style.display = 'none'; // Hide the modal
+    });
+  </script>
+</body>
+</html>

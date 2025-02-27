@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site Title</title>
+    </head>
+    <body>
+
+
+        <div class="menu_search">
+            <input type="text" id="search_input" placeholder="Search products" onkeyup="search()">
+        </div>
+
+        <div class="product_list" id="product_list">
+            <ul>
+                <li class="menu_li">
+                    <a href="#">Home</a>
+                </li>
+                <li class="menu_li">
+                    <a href="#" class="menu_li_link">About</a>
+                    <ul>
+                        <li>
+                            <a href="#" class="menu_li_link">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_li_link">Html</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_li_link">Css</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_li_link">Javascript</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_li">
+                    <a href="#" class="menu_li_link">Contact</a>
+                </li>
+                <li class="menu_li">
+                    <a href="#" class="menu_li_link">Help</a>
+                    <ul>
+                        <li>
+                            <a href="#" class="menu_li_link">Query</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_li_link">Man</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_li_link">Women</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_li_link">Boys</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu_li">
+                    <a href="#" class="menu_li_link">Service</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <script>
+            const search = () => {
+                const searchbox = document.getElementById("search_input").value.toUpperCase();
+                const menuItems = document.querySelectorAll(".product_list ul li");
+                const allLinks = document.querySelectorAll(".product_list ul .menu_li_link");
+        
+                for (let i = 0; i < menuItems.length; i++) {
+                    menuItems[i].style.display = "none"; // Hide all items initially
+                }
+        
+                for (let j = 0; j < allLinks.length; j++) {
+                    const linkText = allLinks[j].textContent || allLinks[j].innerText;
+                    if (linkText.toUpperCase().indexOf(searchbox) > -1) {
+                        allLinks[j].parentElement.style.display = ""; // Show matching item
+                        let parent = allLinks[j].closest(".menu_li");
+                        if (parent) {
+                            parent.style.display = ""; // Show parent item if it has a match in the submenu
+                        }
+                    }
+                }
+            };
+        </script>
+        
+    </body>
+</html>

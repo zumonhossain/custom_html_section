@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Box Toggle</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <style>
+        .search_input_box {
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            width: 100%;
+            max-width: 900px;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateX(-50%);
+        }
+
+        .search_input_box.active {
+            opacity: 1;
+        }
+
+        .search_input_box::before {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background: #000000;
+            left: 10px;
+            top: -6px;
+            transform: rotate(45deg);
+        }
+
+        .search_input_box input {
+            height: 35px;
+            width: 100%;
+            outline: none;
+            padding: 0 15px;
+            font-size: 16px;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+        .header_middle_search_icon i {
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <div class="header_middle_search_icon">
+                    <i class="fa-solid fa-magnifying-glass header_middle_search_icon_arrow"></i>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="search_input_box">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelector(".header_middle_search_icon .header_middle_search_icon_arrow").addEventListener("click", function () {
+            const searchBox = document.querySelector(".search_input_box");
+            searchBox.classList.toggle("active");
+            this.classList.toggle("fa-magnifying-glass");
+            this.classList.toggle("fa-xmark");
+        });
+    </script>
+</body>
+</html>

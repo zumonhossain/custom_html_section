@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Box Toggle</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <style>
+        /* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.header_navbar{
+  height: 100%;
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: red;
+  padding: 0 50px;
+}
+.header_navbar .logo a{
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header_navbar .nav-links{
+  line-height: 70px;
+  height: 100%;
+}
+.header_navbar .links{
+  display: flex;
+}
+.header_navbar .links li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 14px;
+}
+.header_navbar .links li a{
+  height: 100%;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.links li:hover .htmlcss-arrow,
+.links li:hover .js-arrow{
+  transform: rotate(180deg);
+  }
+
+.header_navbar .links li .arrow{
+  /* background: red; */
+  height: 100%;
+  width: 22px;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.header_navbar .links li .sub-menu{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  line-height: 40px;
+  background: #3E8DA8;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+  display: none;
+  z-index: 2;
+}
+.header_navbar .links li:hover .htmlCss-sub-menu,
+.header_navbar .links li:hover .js-sub-menu{
+  display: block;
+}
+.header_navbar .links li .sub-menu li{
+  padding: 0 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.header_navbar .links li .sub-menu a{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.header_navbar .links li .sub-menu .more-arrow{
+  line-height: 40px;
+}
+.header_navbar .links li .sub-menu .more-sub-menu{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-radius: 0 4px 4px 4px;
+  z-index: 1;
+  display: none;
+}
+.links li .sub-menu .more:hover .more-sub-menu{
+  display: block;
+}
+.header_navbar .nav-links .sidebar-logo{
+  display: none;
+}
+.header_navbar .fa-bars{
+  display: none;
+}
+@media (max-width:920px) {
+  .header_navbar{
+    max-width: 100%;
+    padding: 0 25px;
+  }
+
+  .header_navbar .logo a{
+    font-size: 27px;
+  }
+  .header_navbar .links li{
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+  .header_navbar .links li a{
+    font-size: 15px;
+  }
+}
+@media (max-width:800px){
+  .header_navbar .fa-bars{
+    display: block;
+  }
+  .header_navbar .nav-links{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: block;
+    max-width: 270px;
+    width: 100%;
+    background:  #3E8DA8;
+    line-height: 40px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  .header_navbar .nav-links .sidebar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar-logo .logo-name{
+    font-size: 25px;
+    color: #fff;
+  }
+    .sidebar-logo  i,
+    .header_navbar .fa-bars{
+      font-size: 25px;
+      color: #fff;
+    }
+  .header_navbar .links{
+    display: block;
+    margin-top: 20px;
+  }
+  .header_navbar .links li .arrow{
+    line-height: 40px;
+  }
+.header_navbar .links li{
+    display: block;
+  }
+.header_navbar .links li .sub-menu{
+  position: relative;
+  top: 0;
+  box-shadow: none;
+  display: none;
+}
+.header_navbar .links li .sub-menu li{
+  border-bottom: none;
+
+}
+.header_navbar .links li .sub-menu .more-sub-menu{
+  display: none;
+  position: relative;
+  left: 0;
+}
+.header_navbar .links li .sub-menu .more-sub-menu li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.links li:hover .htmlcss-arrow,
+.links li:hover .js-arrow{
+  transform: rotate(0deg);
+  }
+  .header_navbar .links li .sub-menu .more-sub-menu{
+    display: none;
+  }
+  .header_navbar .links li .sub-menu .more span{
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+
+  .links li .sub-menu .more:hover .more-sub-menu{
+    display: none;
+  }
+  .header_navbar .links li:hover .htmlCss-sub-menu,
+  .header_navbar .links li:hover .js-sub-menu{
+    display: none;
+  }
+.header_navbar .nav-links.show1 .links .htmlCss-sub-menu,
+  .header_navbar .nav-links.show3 .links .js-sub-menu,
+  .header_navbar .nav-links.show2 .links .more .more-sub-menu{
+      display: block;
+    }
+    .header_navbar .nav-links.show1 .links .htmlcss-arrow,
+    .header_navbar .nav-links.show3 .links .js-arrow{
+        transform: rotate(180deg);
+}
+    .header_navbar .nav-links.show2 .links .more-arrow{
+      transform: rotate(90deg);
+    }
+}
+@media (max-width:370px){
+  .header_navbar .nav-links{
+  max-width: 100%;
+} 
+}
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="header_navbar">
+                      <i class="fa-solid fa-bars"></i>
+                      <div class="nav-links">
+                        <div class="sidebar-logo">
+                          <span class="logo-name">CodingLab</span>
+                          <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <ul class="links">
+                          <li><a href="#">HOME</a></li>
+                          <li>
+                            <a href="#">HTML & CSS</a>
+                            <i class="fa-solid fa-angle-down htmlcss-arrow arrow"></i>
+                            <ul class="htmlCss-sub-menu sub-menu">
+                              <li><a href="#">Web Design</a></li>
+                              <li><a href="#">Login Forms</a></li>
+                              <li><a href="#">Card Design</a></li>
+                              <li class="more">
+                                <span><a href="#">More</a>
+                                <!-- <i class='bx bxs-chevron-right arrow more-arrow'></i> -->
+                                <i class="fa-solid fa-angle-down arrow more-arrow"></i>
+                              </span>
+                                <ul class="more-sub-menu sub-menu">
+                                  <li><a href="#">Neumorphism</a></li>
+                                  <li><a href="#">Pre-loader</a></li>
+                                  <li><a href="#">Glassmorphism</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">JAVASCRIPT</a>
+                            <i class="fa-solid fa-angle-down js-arrow arrow"></i>
+                            <ul class="js-sub-menu sub-menu">
+                              <li><a href="#">Dynamic Clock</a></li>
+                              <li><a href="#">Form Validation</a></li>
+                              <li><a href="#">Card Slider</a></li>
+                              <li><a href="#">Complete Website</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">ABOUT US</a></li>
+                          <li><a href="#">CONTACT US</a></li>
+                        </ul>
+                      </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // search-box open close js code
+    let header_navbar = document.querySelector(".header_navbar");
+    
+    
+    // sidebar open close js code
+    let navLinks = document.querySelector(".nav-links");
+    let menuOpenBtn = document.querySelector(".header_navbar .fa-bars");
+    let menuCloseBtn = document.querySelector(".nav-links .fa-xmark");
+    menuOpenBtn.onclick = function() {
+    navLinks.style.left = "0";
+    }
+    menuCloseBtn.onclick = function() {
+    navLinks.style.left = "-100%";
+    }
+    
+    
+    // sidebar submenu open close js code
+    let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+    htmlcssArrow.onclick = function() {
+     navLinks.classList.toggle("show1");
+    }
+    let moreArrow = document.querySelector(".more-arrow");
+    moreArrow.onclick = function() {
+     navLinks.classList.toggle("show2");
+    }
+    let jsArrow = document.querySelector(".js-arrow");
+    jsArrow.onclick = function() {
+     navLinks.classList.toggle("show3");
+    }
+      </script>
+</body>
+</html>

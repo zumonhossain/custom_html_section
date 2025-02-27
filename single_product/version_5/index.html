@@ -1,0 +1,230 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Solustrid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        .zooming_show_image {
+        overflow: hidden;
+        }
+        .zooming_show_image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        -webkit-transform: scale(var(--zoom, 1));
+        -ms-transform: scale(var(--zoom, 1));
+        transform: scale(var(--zoom, 1));
+        -webkit-transform-origin: var(--x) var(--y);
+        -ms-transform-origin: var(--x) var(--y);
+        transform-origin: var(--x) var(--y);
+        -webkit-transition: -webkit-transform 0.3s ease;
+        transition: -webkit-transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+        cursor: -webkit-zoom-in;
+        cursor: zoom-in;
+        aspect-ratio: 1 / 1;
+        }
+        .zooming_show_image:hover {
+        --zoom: 3;
+        border-radius: 10px;
+        }
+        .zoom_img_active .owl-stage-outer {
+            margin-left: 60px;
+        }
+        .zoom_img_active .owl-dots {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: scroll;
+            height: 100%;
+        }
+        .zoom_img_active .owl-dots::-webkit-scrollbar {
+        width: 5px;
+        }
+        .zoom_img_active .owl-dots::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        }
+        .zoom_img_active .owl-dots::-webkit-scrollbar-thumb {
+        background: #888;
+        }
+        .zoom_img_active .owl-dots::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        }
+
+
+
+        .zoom_img_active .owl-dots div {
+            margin: 0; /* Remove inline spacing for vertical alignment */
+            border: 1px solid #ffffff;
+        }
+
+        .zoom_img_active .owl-dots img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border-radius: 5px;
+            object-fit: cover; /* Ensures proper image scaling */
+        }
+
+        .zoom_img_active .owl-dots div.active {
+            border: 1px solid var(--primary_color);
+        }
+
+        .zoom_img_active .owl-nav {
+            position: absolute;
+            width: 100%;
+            top: 45%;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            padding-left: 60px;
+        }
+
+        .zoom_img_active .owl-nav .owl-prev,
+        .zoom_img_active .owl-nav .owl-next {
+            pointer-events: auto;
+        }
+
+        </style>
+    </head>
+    <body>
+
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="zoom_img_active owl-carousel">
+                        <div data-dot="<div style='position: relative; display: inline-block;'><img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'><span class='video_icon_overlay'></span></div>"
+                        class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-dot="<img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'>" class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-dot="<img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'>" class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-dot="<img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'>" class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-dot="<img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'>" class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-dot="<img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'>" class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-dot="<img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'>" class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-dot="<img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'>" class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                        <div data-dot="<img src='https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg'>" class="zooming_show_image">
+                            <div class="project-picture">
+                                <img src="https://ecommerce.mohasagorit.solutions/public//storage/images/product_thumbnail_img/thumbnail_1730626851_7631.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+
+
+        <script>
+            $(document).ready(function() {
+                var owl = $('.zoom_img_active').owlCarousel({
+                    loop: false,
+                    rewind: true,
+                    margin: 0,
+                    items: 1,
+                    dotsData: true,
+                    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                    nav: true,
+                    dots: true,
+                    autoplay: false,
+                    responsive: {
+                        0: {
+                            items: 1
+                        }
+                    }
+                });
+                
+                function centerActiveThumbnail() {
+                    const activeDot = $('.zoom_img_active .owl-dot.active');
+                    if (activeDot.length) {
+                        activeDot[0].scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest', 
+                            inline: 'center'
+                        });
+                    }
+                }
+
+                owl.on('changed.owl.carousel', function() {
+                    centerActiveThumbnail();
+                });
+                centerActiveThumbnail();
+            });
+
+                    // zooming image start
+        document.querySelectorAll('.zooming_show_image').forEach(elem => {
+            let x, y, width, height;
+            elem.onmouseenter = () => {
+                const size = elem.getBoundingClientRect();
+
+                x = size.x;
+                y = size.y;
+
+                width = size.width;
+                height = size.height;
+            };
+
+            elem.onmousemove = e => {
+                const horizontal = (e.clientX - x) / width * 100;
+                const vertical = (e.clientY - y) / height * 100;
+
+                elem.style.setProperty('--x', horizontal + '%');
+                elem.style.setProperty('--y', vertical + '%');
+            };
+        });
+        // zooming image end
+        </script>
+    </body>
+</html>

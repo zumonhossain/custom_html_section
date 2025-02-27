@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Netwise - IT Solutions & Technology HTML Template">
+  <title>Netwise - IT Solutions & Technology HTML Template</title>
+
+  <style>
+    .marque_content {
+        padding: 30px 0;
+        gap: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .marque_item ul {
+      gap: 40px;
+      -webkit-animation: scroll2 18s linear infinite;
+      animation: scroll2 18s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin:0;
+      padding:0;
+    }
+    .marque_item ul li {
+      list-style:none;
+    }
+    @-webkit-keyframes scroll2 {
+      0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+
+      to {
+        -webkit-transform: translateX(calc(-100% - 2.6rem));
+        transform: translateX(calc(-100% - 2.6rem));
+      }
+    }
+
+    @keyframes scroll2 {
+      0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+
+      to {
+        -webkit-transform: translateX(calc(-100% - 2.6rem));
+        transform: translateX(calc(-100% - 2.6rem));
+      }
+    }
+
+    .marque_item:hover ul {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<div class="marque_content">
+  <div class="marque_item">
+    <ul>
+      <li>Marque Animation - 1</li>
+      <li>Marque Animation - 2</li>
+      <li>Marque Animation - 3</li>
+      <li>Marque Animation - 4</li>
+      <li>Marque Animation - 5</li>
+    </ul>
+  </div>
+  <div class="marque_item">
+    <ul>
+      <li>Marque Animation - 1</li>
+      <li>Marque Animation - 2</li>
+      <li>Marque Animation - 3</li>
+      <li>Marque Animation - 4</li>
+      <li>Marque Animation - 5</li>
+    </ul>
+  </div>
+</div>
+
+</html>

@@ -1,13 +1,13 @@
 
 
 
-.container#blur.active{
-    filter:blur(20px);
+#popup_blur.popup_modal_card_active{
+    filter:blur(2px);
     pointer-events: none;
     user-select: none;
 }
 
-#popup{
+#popup_modal_card{
     position: fixed;
     top: 40%;
     left: 50%;
@@ -20,7 +20,7 @@
     opacity: 0;
     transition: 0.5s;
 }
-#popup.active{
+#popup_modal_card.popup_modal_card_active{
     top: 50%;
     visibility: visible;
     opacity: 1;

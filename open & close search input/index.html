@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <style>
+        .search_wrapper {
+            position: relative;
+        }
+        .search_input_box {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            width: 100%;
+            max-width: 1400px;
+            opacity: 0;
+            transform: translateX(-50%);
+            display: none;
+        }
+        .search_input_box.active {
+            opacity: 1;
+            z-index: 2;
+            display: block;
+        }
+        .search_input_box input {
+            height: 50px;
+            width: 100%;
+            outline: none;
+            padding: 0 15px;
+            font-size: 16px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+        }
+        .search_icon_close {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="search_icon_open">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </div>
+    <div class="search_icon_close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </div>
+
+    <div class="search_input_box">
+        <input type="text" placeholder="Search Your Products..." class="search__product">
+    </div>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        document.querySelector(".search_icon_open").addEventListener("click", function () {
+            document.querySelector(".search_input_box").classList.add("active");
+            document.querySelector(".search_icon_open").style.display = "none";
+            document.querySelector(".search_icon_close").style.display = "block";
+        });
+
+        document.querySelector(".search_icon_close").addEventListener("click", function () {
+            document.querySelector(".search_input_box").classList.remove("active");
+            document.querySelector(".search_icon_open").style.display = "block";
+            document.querySelector(".search_icon_close").style.display = "none";
+        });
+    </script>
+</body>
+</html>
