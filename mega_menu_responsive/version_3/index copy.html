@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mega Menu</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/fontawesome.min.css">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+			.main_menu {
+				text-align: center;
+			}
+			.main_menu ul {
+				margin: 0;
+				padding: 0;
+			}
+			.main_menu ul li {
+				list-style: none;
+				display: inline-block;
+				line-height: 50px;
+				margin-left: 25px;
+			}
+			.main_menu ul li:first-child {
+				margin-left: 0px;
+			}
+
+			.main_menu ul li a {
+				text-decoration: none;
+				font-size: 16px;
+				font-weight: 500;
+				color: #000000;
+				position: relative;
+				text-transform: capitalize;
+				transition: color 0.3s ease;
+			}
+			.main_menu ul li:hover > a {
+				color: red;
+			}
+
+			.main_menu ul li .sub_menu {
+				position: absolute;
+				width: 270px;
+				z-index: 500;
+				background-color: #ffffff;
+				box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
+				padding: 10px 20px;
+				text-align: left;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.5s ease;
+			}
+			.main_menu ul li:hover > .sub_menu {
+				margin-top: 0;
+				visibility: visible;
+				opacity: 1;
+			}
+			.main_menu ul li .sub_menu li {
+				margin: 0px;
+				display: flex;
+				width: 100%;
+				line-height: 25px;
+				padding: 5px 0px;
+			}
+			.main_menu ul li .sub_menu li a {
+				font-size: 14px;
+				font-weight: 400;
+				display: block;
+				width: 100%;
+			}
+			.main_menu ul li .sub_menu li a i {
+				float: right;
+				line-height: 25px;
+			}
+			.main_menu ul li .sub_menu li .sub_menu {
+				left: 100%;
+			}
+			.main_menu ul li .sub_menu li:hover .sub_menu {
+				margin-top: 0;
+				visibility: visible;
+				opacity: 1;
+			}
+			.main_menu ul li .sub_menu.mega_menu li ul li {
+				line-height: 1;
+				display: block;
+				padding: 0;
+			}
+
+			.main_menu ul li .sub_menu.mega_menu li ul li a {
+				padding: 10px 0;
+				display: inline-block;
+				font-size: 14px;
+				font-weight: 400;
+				color: #555555;
+				transition: color 0.3s ease;
+			}
+			.main_menu ul li .sub_menu.mega_menu li ul li:hover > a {
+				color: red;
+			}
+			.main_menu ul li .sub_menu.mega_menu {
+				text-align: left;
+				left: 50%;
+				transform: translateX(-50%);
+				max-width: 1100px;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				padding: 5px 8px 8px 8px;
+			}
+
+			.main_menu ul li .sub_menu.mega_menu li {
+				flex: 0 0 25%;
+				padding: 0 15px;
+			}
+
+			.main_menu ul li .sub_menu.mega_menu li .title {
+				font-size: 16px;
+				color: #ea4636;
+				font-weight: 500;
+				line-height: 1;
+				margin-bottom: 0;
+				padding-top: 15px;
+			}
+
+			.mobile_menu_head,
+			.mobile_menu_trigger {
+				display: none;
+			}
+			/*responsive*/
+			@media(max-width: 991px) {
+				.mobile_menu_trigger {
+					display: block;
+				}
+				.main_menu {
+					text-align: left;
+					position: fixed;
+					width: 320px;
+					background-color: #ffffff;
+					left: 0;
+					top: 0;
+					height: 100%;
+					overflow: hidden;
+					transform: translate(-100%);
+					transition: all 0.5s ease;
+					z-index: 1099;
+				}
+
+				.main_menu.active {
+					transform: translate(0%);
+				}
+
+				.main_menu ul li {
+					line-height: 1;
+					margin: 0;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					border-bottom: 1px solid #dddddd;
+				}
+
+				.main_menu ul li a {
+					line-height: 50px;
+					height: 50px;
+					padding: 0 50px 0 15px;
+				}
+
+				/* .main_menu ul li a i,
+				.main_menu ul li .sub_menu li a i {
+					position: absolute;
+					height: 50px;
+					width: 50px;
+					top: 0;
+					right: 0;
+					text-align: center;
+					line-height: 50px;
+					transform: rotate(-90deg);
+				} */
+
+				.main_menu ul li .menu_icon {
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					display: block;
+				}
+
+				.main_menu .mobile_menu_head {
+					display: flex;
+					height: 50px;
+					border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+					justify-content: space-between;
+					align-items: center;
+					position: relative;
+					z-index: 501;
+					position: sticky;
+					background-color: #ffffff;
+					top: 0;
+				}
+
+				.main_menu .mobile_menu_head .go_back {
+					height: 50px;
+					width: 50px;
+					border-right: 1px solid rgba(0, 0, 0, 0.1);
+					cursor: pointer;
+					line-height: 50px;
+					text-align: center;
+					color: #000000;
+					font-size: 16px;
+					display: none;
+				}
+
+				.main_menu .mobile_menu_head.active .go_back {
+					display: block;
+				}
+
+				.main_menu .mobile_menu_head .current_menu_title {
+					font-size: 15px;
+					font-weight: 500;
+					color: #000000;
+				}
+
+				.main_menu .mobile_menu_head .mobile_menu_close {
+					height: 50px;
+					width: 50px;
+					border-left: 1px solid rgba(0, 0, 0, 0.1);
+					cursor: pointer;
+					line-height: 50px;
+					text-align: center;
+					color: #000000;
+					font-size: 25px;
+				}
+				.main_menu ul li .sub_menu {
+					visibility: visible;
+					opacity: 1;
+					position: absolute;
+					box-shadow: none;
+					margin: 0;
+					padding: 15px;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding-top: 50px;
+					padding-left: 0;
+					padding-right: 0;
+					max-width: none;
+					min-width: auto;
+					display: none;
+					transform: translateX(0%);
+					overflow-y: auto;
+				}
+				.main_menu ul li .sub_menu.mega_menu {
+					visibility: visible;
+					opacity: 1;
+					position: absolute;
+					box-shadow: none;
+					margin: 0;
+					padding: 15px;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding-top: 65px;
+					max-width: none;
+					min-width: auto;
+					display: none;
+					transform: translateX(0%);
+					overflow-y: auto;
+				}
+
+				.main_menu>ul>li .sub_menu.active {
+					display: block;
+				}
+
+				@keyframes slideLeft {
+					0% {
+						opacity: 0;
+						transform: translateX(100%);
+					}
+
+					100% {
+						opacity: 1;
+						transform: translateX(0%);
+					}
+				}
+
+				@keyframes slideRight {
+					0% {
+						opacity: 1;
+						transform: translateX(0%);
+					}
+
+					100% {
+						opacity: 0;
+						transform: translateX(100%);
+					}
+				}
+
+				.main_menu ul li .sub_menu li {
+					line-height: inherit;
+					padding: 0;
+				}
+				.main_menu ul li .sub_menu li a {
+					line-height: 45px;
+					height: 45px;
+					font-size: 15px;
+				}
+				.main_menu ul li .sub_menu li .sub_menu {
+					left: 0;
+				}
+				.main_menu ul li .sub_menu.mega_menu li {
+					flex: 0 0 100%;
+					padding: 0px;
+				}
+				.main_menu ul li .sub_menu.mega_menu li .title {
+					margin-bottom: 5px;
+					padding-top: 0;
+				}
+				.main_menu ul li .sub_menu.mega_menu li ul li a {
+					height: 100%;
+					line-height: 30px;
+					border: none;
+					padding: 1px 0px;
+				}
+
+				.main_menu ul li .sub_menu.mega_menu li ul {
+					margin-bottom: 15px;
+				}
+
+				.menu_overlay {
+					position: fixed;
+					background-color: rgba(0, 0, 0, 0.5);
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1098;
+					visibility: hidden;
+					opacity: 0;
+					transition: all 0.5s ease;
+				}
+
+				.menu_overlay.active {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- header start -->
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<!-- menu start here -->
+					<div class="main_menu_wrapper">
+						<div class="menu_overlay"></div>
+						<nav class="main_menu">
+							<div class="mobile_menu_head">
+								<div class="go_back"><i class="fa fa-angle-left"></i></div>
+								<div class="current_menu_title"></div>
+								<div class="mobile_menu_close">&times;</div>
+							</div>
+							<ul>
+								<li>
+									<a href="https://zeonspark.com">Home</a>
+								</li>
+								<li>
+									<a href="https://mohasagorit.solutions/blogs">Blog</a>
+									<span class="menu_icon">
+										<i class="fas fa-angle-down"></i>
+									</span>
+									<ul class="sub_menu">
+										<li><a href="https://mohasagorit.solutions/product/ecommerce-a-to-z">Standard Layout</a></li>
+										<li><a href="https://getbootstrap.com/docs/4.0/layout/grid/">Grid Layout</a></li>
+										<li><a href="https://getbootstrap.com/docs/5.0/forms/layout/">single Post Layout</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="https://mohasagorit.solutions/about-us">Pages</a>
+									<span class="menu_icon">
+										<i class="fas fa-angle-down"></i>
+									</span>
+									<ul class="sub_menu">
+										<li><a href="https://book.mohasagorit.solutions/login">Login</a></li>
+										<li><a href="https://book.mohasagorit.solutions/register">Register</a></li>
+										<li>
+											<a href="https://mohasagorit.solutions/offers">Other Page</a>
+											<span class="menu_icon">
+												<i class="fas fa-angle-down"></i>
+											</span>
+											<ul class="sub_menu sub_sub_menu">
+												<li><a href="https://mohasagorit.solutions/product/course-skill-training">Sub Sub menu -1</a></li>
+												<li><a href="https://mohasagorit.solutions/product/pos-software">Sub Sub menu -2</a></li>
+												<li><a href="https://mohasagorit.solutions/product/course-skill-training">Sub Sub menu -3</a></li>
+												<li><a href="https://mohasagorit.solutions/product/news-portal-website">Sub Sub menu -4</a></li>
+												<li><a href="https://mohasagorit.solutions/product/portfolio-website">Sub Sub menu -5</a></li>
+											</ul>
+										</li>
+										<li><a href="https://mohasagorit.solutions/services">Faq</a></li>
+										<li><a href="https://mohasagorit.solutions/all-documents">404 Page</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="https://zumonhossain.com">Contact</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!-- menu end here -->
+
+					<!-- mobile menu trigger -->
+					<div class="mobile_menu_trigger">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+		<script src="assets/js/jquery-3.6.3.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- mobile device offcanvas menu -->
+		<script>
+			$(document).ready(function () {
+    const mobileMenuTrigger = $(".mobile_menu_trigger");
+    const menuClose = $(".mobile_menu_close");
+    const menu = $(".main_menu");
+    const menuOverlay = $(".menu_overlay");
+    const goBack = $(".go_back");
+    const menuItems = $('li > a');
+    const menuIcons = $('.menu_icon');
+    const menuTitle = $('.current_menu_title');
+
+    let menuStack = []; // Store previous menu titles
+
+    // Open Mobile Menu
+    mobileMenuTrigger.on("click", function () {
+        menu.addClass("active");
+        menuOverlay.addClass("active");
+    });
+
+    // Close Mobile Menu
+    menuClose.on("click", function () {
+        menu.removeClass("active");
+        menuOverlay.removeClass("active");
+        menuStack = []; // Reset menu history
+        menuTitle.text(''); // Reset title
+        goBack.hide();
+    });
+
+    // Handle Submenus when clicking on links
+    menuItems.on("click", function (e) {
+        const submenu = $(this).next(".sub_menu");
+        if (submenu.length) {
+            e.preventDefault(); // Prevent navigation
+            submenu.stop(true, true).slideToggle(300); // Slide animation
+            
+            // Store previous menu title before updating
+            menuStack.push(menuTitle.text());  
+            menuTitle.text($(this).text().trim()); 
+
+            goBack.show();
+        }
+    });
+
+    // Handle Submenus when clicking on menu_icon
+    menuIcons.on("click", function (e) {
+        e.stopPropagation();
+        const submenu = $(this).siblings(".sub_menu");
+        if (submenu.length) {
+            submenu.stop(true, true).slideToggle(300);
+            
+            // Store previous menu title before updating
+            menuStack.push(menuTitle.text());  
+            menuTitle.text($(this).prev("a").text().trim());
+
+            goBack.show();
+        }
+    });
+
+    // Go Back Button Functionality
+    goBack.on("click", function () {
+        if (menuStack.length > 0) {
+            menuTitle.text(menuStack.pop()); // Revert to previous title
+        }
+
+        $(".sub_menu:visible").last().slideUp(300, function () {
+            $(this).removeClass("active");
+        });
+
+        if (menuStack.length === 0) {
+            goBack.hide(); // Hide "Go Back" when back to main menu
+            menuTitle.text('');
+        }
+    });
+
+    // Close Menu on Overlay Click
+    menuOverlay.on("click", function () {
+        menu.removeClass("active");
+        menuOverlay.removeClass("active");
+        menuStack = [];
+        menuTitle.text('');
+        goBack.hide();
+    });
+});
+
+
+		</script>
+
+	</body>
+</html>

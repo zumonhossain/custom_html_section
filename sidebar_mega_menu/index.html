@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <style>
+        .aside_menu {
+            position: relative;
+        }
+        .aside_menu ul {
+            width: 200px;
+            background: #ededed;
+            margin: 0;
+            padding: 0;
+            /* overflow-y: scroll; */
+            /* max-height: 350px; */
+        }
+        .aside_menu ul::-webkit-scrollbar {
+            width: 3px;
+        }
+        .aside_menu ul::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+
+
+        .aside_menu ul li {
+            list-style: none;
+            border-bottom: 1px solid #dddddd;
+            padding: 10px 15px;
+            display: block;
+            width: 100%;
+        }
+        .aside_menu ul li .aside_menu_link {
+            display: block;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #000000;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .aside_menu ul li:hover > .aside_menu_link {
+            color: red;
+        }
+        .aside_menu ul li .aside_submenu {
+            width: 200px;
+            position: absolute;
+            left: 250px;
+            top: 0px;
+            background: #FFF;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            display: none;
+            height: 100%;
+        }
+        .aside_menu ul li:hover > .aside_submenu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <aside class="aside_menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="aside_menu_link">Categories</a>
+                        </li>
+                        <li>
+                            <a href="#" class="aside_menu_link">
+                                Mega Menu-1
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <ul class="aside_submenu">
+                                <li><a href="#" class="aside_menu_link">Sub Menu-1</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-1</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-1</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-1</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="aside_menu_link">
+                                Mega Menu-2
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <ul class="aside_submenu">
+                                <li><a href="#" class="aside_menu_link">Sub Menu-2</a></li>
+                                <li>
+                                    <a href="#" class="aside_menu_link">
+                                        Sub Sub Menu-1
+                                    </a>
+                                    <ul class="aside_submenu">
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-1</a></li>
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-1</a></li>
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-1</a></li>
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-1</a></li>
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-1</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="aside_menu_link">
+                                        Sub Sub Menu-2
+                                    </a>
+                                    <ul class="aside_submenu">
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-2</a></li>
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-2</a></li>
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-2</a></li>
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-2</a></li>
+                                        <li><a href="#" class="aside_menu_link">Sub Sub Menu-2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-2</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="aside_menu_link">
+                                Mega Menu-3
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <ul class="aside_submenu">
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="aside_menu_link">
+                                Mega Menu-3
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <ul class="aside_submenu">
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="aside_menu_link">
+                                Mega Menu-3
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <ul class="aside_submenu">
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="aside_menu_link">
+                                Mega Menu-3
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <ul class="aside_submenu">
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="aside_menu_link">
+                                Mega Menu-3
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <ul class="aside_submenu">
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="aside_menu_link">
+                                Mega Menu-3
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <ul class="aside_submenu">
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                                <li><a href="#" class="aside_menu_link">Sub Menu-3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+    <script src="assets/js/jquery-3.6.3.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
